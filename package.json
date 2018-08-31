@@ -30,12 +30,15 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "sass-loader": "^7.1.0",
+    "compass-loader": "^0.0.4",
     "style-loader": "^0.13.1",
     "webpack-dev-middleware": "^1.10.0",
     "webpack-dev-server": "^3.1.5",
     "webpack-hot-middleware": "^2.22.3",
-    "webpack-html-plugin": "^0.1.1"
-  },
+    "webpack-html-plugin": "^0.1.1",
+    "p5": "^0.7.1",
+    "react-p5-wrapper":"^0.0.4"
+},
   "devDependencies": {
     "babel-preset-env": "^1.6.1",
     "copy-webpack-plugin": "^4.5.2",

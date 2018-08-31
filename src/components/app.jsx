@@ -1,10 +1,30 @@
 import React, { Component } from "react";
+import {Route} from "react-router-dom";
 
 import Navigation from "./navigation";
-
+import Home from "./views/home";
+import Contact from "./views/contact";
+import Profile from "./views/profile";
+import Portfolio from "./views/portfolio";
+import StarBackground from "./starbackground";
+import client from "./client";
 class App extends Component {
-    render() {
-        return (
+    constructor(props){
+        super(props);
+        this.routemap = {routedata:[]};
+    }
+    componentDidMount(){
+        client.get("navdata.json")
+            .then((res)=> {
+                this.setState({
+                    routedata : res.data
+                });
+            }).catch((err)=>{
+            console.log(err);
+        });
+    }
+    render(){
+        return(
             <div id="wrapper">
                 <header className="header">
                     <div className="container columns">
@@ -16,30 +36,16 @@ class App extends Component {
                         <div className="column is-10">
                             <h1 className="header-title has-text-centered">Test</h1>
                         </div>
-                        <div className="column">
-                            <div id="social">
-                                <nav>
-                                    <Social/>
-                                </nav>
-                            </div>
-                        </div>
                     </div>
                 </header>
                 <main role="main" className="container">
-                    <div id="hero-ad">
-                        <small>banner ad</small>
-                        <div className="desktop">
-                            <img src="http://via.placeholder.com/768x90" />
-                        </div>
-                        <div className="tablet">
-                            <img src="http://via.placeholder.com/320x250" />
-                        </div>
-                    </div>
-                    {this.props.children}
-                    <div id="footer-ad">
-                        <small>banner ad</small>
-                        <img src="http://via.placeholder.com/320x250"/>
-                    </div>
+
+
+                    <Route exact path="/" component={Home} />
+                    <Route path="/profile" component={Profile} />
+                    <Route path="/portfolio" component={Portfolio}/>
+                    <Route path="/contact" component={Contact}/>
+
                 </main>
                 <footer className="footer">
                     <div className="container">
@@ -49,7 +55,9 @@ class App extends Component {
                     </div>
                 </footer>
             </div>
+
         );
     }
-}
+};
+
 export default App;

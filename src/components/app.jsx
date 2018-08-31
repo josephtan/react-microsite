@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import {Route} from "react-router-dom";
-
 import Navigation from "./navigation";
 import Home from "./views/home";
 import Contact from "./views/contact";
@@ -24,6 +23,9 @@ class App extends Component {
         });
     }
     render(){
+        const RouteTags = this.routemap.routedata.map((route) => {
+            return(<Route exact={route.exact} key={route.url} path={route.url} component={route.text}/>)
+        });
         return(
             <div id="wrapper">
                 <header className="header">
@@ -40,11 +42,7 @@ class App extends Component {
                 </header>
                 <main role="main" className="container">
 
-
-                    <Route exact path="/" component={Home} />
-                    <Route path="/profile" component={Profile} />
-                    <Route path="/portfolio" component={Portfolio}/>
-                    <Route path="/contact" component={Contact}/>
+                    {RouteTags}
 
                 </main>
                 <footer className="footer">

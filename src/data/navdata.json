@@ -1,0 +1,6 @@
+[
+  { "type": "link", "text": "Home", "url": "/", "exact":true},
+  { "type": "link", "text": "Profile", "url": "/profile","exact":false},
+  { "type": "link", "text": "Portfolio", "url": "/portfolio","exact":false},
+  { "type": "link", "text": "Contacts", "url": "/contact","exact":false}
+]

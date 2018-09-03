@@ -31,8 +31,9 @@ class App extends Component {
             "Contact" :Contact,
             "Profile" :Profile,
             "Portfolio": Portfolio
-        };
-     const RouteTags = this.state.routedata.map((routelink) => {
+    };
+
+    const RouteTags = this.state.routedata.map((routelink) => {
             return(
                 <Route exact={routelink.exact} path={routelink.url} component={componentRegistry[routelink.text]} />
 

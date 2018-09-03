@@ -13,5 +13,6 @@ package.json contents:
 ---
 Assuming that your local dev environment has node.js / nvm, webpack and yarn installed please proceed through the steps below:
 1. Clone/ Download the project folder into your local environment
-2. Type in "npm run build" on the command line of the local directory in which you have downloaded the project to transpile the build.
-3. Type in "npm run dev" to get the localhost server up and running.
+2. Run "yarn install" to download the packages as described on the package.json.
+3. Run "npm run build" on the command line to build the project.
+4. Run "npm run dev" to get the localhost server up and running.

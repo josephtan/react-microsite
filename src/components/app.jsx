@@ -7,26 +7,39 @@ import Profile from "./views/profile";
 import Portfolio from "./views/portfolio";
 import StarBackground from "./starbackground";
 import client from "./client";
+
 class App extends Component {
+
     constructor(props){
         super(props);
-        this.routemap = {routedata:[]};
+        this.state = {routedata:[]};
     }
     componentDidMount(){
         client.get("navdata.json")
             .then((res)=> {
                 this.setState({
-                    routedata : res.data
+                   routedata : res.data
                 });
             }).catch((err)=>{
             console.log(err);
         });
     }
     render(){
-        const RouteTags = this.routemap.routedata.map((route) => {
-            return(<Route exact={route.exact} key={route.url} path={route.url} component={route.text}/>)
-        });
-        return(
+        /** React Needs a component registry to render a HTML node https://stackoverflow.com/a/38903335/2796523  **/
+    const componentRegistry = {
+            "Home": Home,
+            "Contact" :Contact,
+            "Profile" :Profile,
+            "Portfolio": Portfolio
+        };
+     const RouteTags = this.state.routedata.map((routelink) => {
+            return(
+                <Route exact={routelink.exact} path={routelink.url} component={componentRegistry[routelink.text]} />
+
+            )
+     });
+
+    return(
             <div id="wrapper">
                 <header className="header">
                     <div className="container columns">
@@ -41,7 +54,6 @@ class App extends Component {
                     </div>
                 </header>
                 <main role="main" className="container">
-
                     {RouteTags}
 
                 </main>
@@ -56,6 +68,7 @@ class App extends Component {
 
         );
     }
-};
+}
+
 
 export default App;

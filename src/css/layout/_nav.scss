@@ -10,7 +10,7 @@ nav{
   position: absolute;
   z-index: 10;
   top:0;
-    
+
   .fa-bars{position: absolute; z-index: 4;
     top:26px;
     left:17px;
@@ -19,25 +19,9 @@ nav{
     @include transition(all, 0.3s, ease-in-out);
   }
   .text{position: absolute; z-index: 4; top: 54px; left: 5px; font-size: 1.2em}
-  svg{
-    position: absolute;
-    z-index: 2;
-    top:0;
-    left:0;
-    width: 52px;
-    height: 52px;
-    max-width: 52px;
-    min-height: 52px;
-    @include rotate(90deg);
-    @include transition(all, 0.3s, ease-in-out);
-  }
+
   &:hover{
     color: $cyan-light;
-    svg{
-      path{stroke: $cyan-light}
-      @include rotate(0deg);
-      @include transition(all, 0.3s, ease-in-out);
-    }
     .fa-bars{ color: $cyan-light; @include transition(all, 0.3s, ease-in-out); @include rotate(-90deg);}
     cursor: pointer;
     #nav-icon2{
@@ -48,8 +32,6 @@ nav{
     }
   }
   &.active{
-    svg{path{stroke: $cyan-light;} @include rotate(0deg);
-    }
     .fa-bars{ color: $cyan-light; @include rotate(-90deg);}
     .text{color: $cyan-light;}
   }
@@ -63,7 +45,6 @@ nav{
 }
   .dropdown{ position: absolute; z-index: 12; width: 100%;}
 }
-
 
 .dropdown-content{min-width: 250px; visibility: hidden; background: transparent; border-radius:0px; box-shadow: none; margin: 10% auto;
   &.active{visibility: visible}

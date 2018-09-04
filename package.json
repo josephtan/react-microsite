@@ -38,6 +38,7 @@
     "webpack-hot-middleware": "^2.22.3",
     "webpack-html-plugin": "^0.1.1",
     "p5": "^0.7.1",
+    "d3": "^5.7.0",
     "react-p5-wrapper": "^0.0.4"
   },
   "devDependencies": {

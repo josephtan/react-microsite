@@ -1,4 +1,4 @@
-var webpack = require("webpack");
+let webpack = require("webpack");
 const path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
@@ -11,7 +11,7 @@ module.exports = {
   output: {
     path: __dirname + "/public",
     filename: "bundle.js",
-      publicPath: buildPath
+    publicPath: buildPath
   },
   module: {
       rules: [
@@ -25,7 +25,21 @@ module.exports = {
           },
           {
               test: /\.scss$/,
-              loader: ExtractTextPlugin.extract("css-loader!sass-loader")
+              loader: ExtractTextPlugin.extract("css-loader")
+          },
+          {
+             test:/\.scss$/,
+             loader:"sass-loader",
+              options: {   includePaths: [path.resolve(__dirname,"node_modules/compass-mixins/lib")]}
+          },
+          {test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+              use: [{
+                  loader: 'file-loader',
+                  options: {
+                      name: '[name].[ext]',
+                      outputPath: 'fonts/'
+                  }
+              }]
           }
       ]
     },

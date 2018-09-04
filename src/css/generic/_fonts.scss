@@ -1,0 +1,11 @@
+/**
+ ######## Font includes ########
+**/
+@include font-face("FontAwesome", font-files("fontawesome-webfont.ttf" , "fontawesome-webfont.eot","fontawesome-webfont.svg", "fontawesome-webfont.woff", "fontawesome-webfont.woff2"));
+
+@include font-face("FontMfizz", font-files("font-mfizz.ttf" , "font-mfizz.eot","font-mfizz.svg", "font-mfizz.woff", "font-mfizz.woff2"));
+/**
+ ######## Font classes ########
+**/
+.font-fa {font-family: "FontAwesome"}
+.font-fmizz{font-family: "FontMfizz"}

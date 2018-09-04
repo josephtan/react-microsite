@@ -1,0 +1,104 @@
+@mixin font-size($size) {
+  font-size: pxtoem($size);
+}
+
+
+///*
+// * Breakpoints: for  responsive design
+// * ------------------------------------------------------------------------------------------------------------------ */
+@mixin tny-breakpoint($box: '') {
+  @if $box == 'inner' {
+    @media (max-width: $tny_breakpoint_inner) {
+      @content;
+
+    }
+  } @else if $box == 'outer' {
+    @media (max-width: $tny_breakpoint_outer) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $tny_breakpoint) {
+      @content;
+    }
+  }
+}
+
+@mixin sml-breakpoint($box: '') {
+  @if $box == 'inner' {
+    @media (max-width: $sml_breakpoint_inner) {
+      @content;
+
+    }
+  } @else if $box == 'outer' {
+    @media (max-width: $sml_breakpoint_outer) {
+      @content;
+
+    }
+  } @else {
+    @media (max-width: $sml_breakpoint) {
+      @content;
+
+    }
+  }
+}
+
+@mixin med-breakpoint($box: '') {
+  @if $box == 'inner' {
+    @media (max-width: $med_breakpoint_inner) {
+      @content;
+    }
+  } @else if $box == 'outer' {
+    @media (max-width: $med_breakpoint_outer) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $med_breakpoint) {
+      @content;
+    }
+  }
+}
+
+@mixin lrg-breakpoint($box: '') {
+  @if $box == 'inner' {
+    @media (max-width: $lrg_breakpoint_inner) {
+      @content;
+    }
+  } @else if $box == 'outer' {
+    @media (max-width: $lrg_breakpoint_outer) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $lrg_breakpoint) {
+      @content;
+    }
+  }
+}
+
+@mixin xlg-breakpoint($box: '') {
+  @if $box == 'inner' {
+    @media (max-width: $xlg_breakpoint_inner) {
+      @content;
+    }
+  } @else if $box == 'outer' {
+    @media (max-width: $xlg_breakpoint_outer) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $xlg_breakpoint) {
+      @content;
+    }
+  }
+}
+
+// Custom Breakpoint for custom max-width breakpoints
+@mixin ctm-breakpoint($bp: $xlg_breakpoint, $min_max: 'max') {
+  @if $min_max == 'max' {
+    @media (max-width: $bp) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $bp) {
+      @content;
+    }
+  }
+}

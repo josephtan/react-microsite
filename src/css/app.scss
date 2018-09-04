@@ -1,5 +1,24 @@
 /*------------------------------------*\
     GLOBAL DECLARATIONS & IMPORTS
 \*------------------------------------*/
+@import "compass";
 @import "vendor/bulma/bulma";
-//@import "compass/css3";
+@import "variables";
+@import "vendor/hamburger/burgerbase";
+@import "vendor/hamburger/spin";
+@import "generic/fonts";
+@import "vendor/fontAwesome/faVariables";
+
+/*------------------------------------*\
+    $BREAK POINTS
+\*------------------------------------*/
+@import "layout/breakpoints";
+
+/*------------------------------------*\
+    $PAGE STRUCTURE
+\*------------------------------------*/
+@import "layout/general";
+@import "layout/header";
+@import "layout/nav";
+@import "layout/main";
+@import "layout/footer";

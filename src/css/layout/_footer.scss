@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+.footer {
+	position: relative;
+	clear: both;
+	color: $white;
+	line-height: 1.2;
+	font-size: 0.8rem;
+	width: 100%;
+	padding:$pad;
+	margin-top: 2%;
+	@include background-image(linear-gradient($cyan, $blue-dark));
+	a {
+		color: $gray-light;
+	}
+
+
+	h4{display: inline; font-family: "Oswald"; width: auto; text-align: center; font-size: 1.1rem; font-weight: normal;}
+	padding-bottom: 1em;
+	@include ctm-breakpoint(1245px){
+		max-height: 100%;
+	}
+}

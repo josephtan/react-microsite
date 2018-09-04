@@ -34,23 +34,19 @@ class App extends Component {
     };
 
     const RouteTags = this.state.routedata.map((routelink) => {
-            return(
-                <Route exact={routelink.exact} path={routelink.url} component={componentRegistry[routelink.text]} />
-
-            )
+            return(<Route exact={routelink.exact} key={routelink.index} path={routelink.url} component={componentRegistry[routelink.text]} />)
      });
 
     return(
             <div id="wrapper">
+                <div id="menuOverlay"></div>
                 <header className="header">
-                    <div className="container columns">
-                        <div id="navbar" className="column">
-                            <nav>
+                    <div>
+                        <div id="navbar">
                                 <Navigation />
-                            </nav>
                         </div>
-                        <div className="column is-10">
-                            <h1 className="header-title has-text-centered">Test</h1>
+                        <div className="column">
+                            <h1 className="header-title has-text-centered">Joseph Tan</h1>
                         </div>
                     </div>
                 </header>

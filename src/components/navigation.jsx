@@ -25,15 +25,17 @@ export default class Navigation extends Component{
             console.log(err);
         });
     }
+
     toggleShow (){
         const currentState = this.state.active;
         const currentNav = this.state.showNav;
         this.setState({ active: !currentState,showNav:!currentNav, show: !this.state.show});
-        console.log(currentNav);
         if(currentNav === true){
             document.getElementById("wrapper").classList.add("open-menu");
+            document.getElementById("menuOverlay").classList.add("active");
         } else{
             document.getElementById("wrapper").classList.remove("open-menu");
+            document.getElementById("menuOverlay").classList.remove("active");
         }
     }
     clickHandle(){
@@ -46,21 +48,21 @@ export default class Navigation extends Component{
                     <NavLink key={navlink.url} to={navlink.url}> {navlink.text}</NavLink>)}
         });
         return (
-            <div className={this.state.active ? "dropdown active" : "dropdown"}>
-                <button  className={this.state.active ? " dropdown-btn hamburger hamburger--spin is-active": "dropdown-btn hamburger hamburger--spin"} onClick={this.clickHandle.bind(this)}>
-                          <span className="hamburger-box">
-                          <span className="hamburger-inner"></span>
-                        </span>
-                </button>
-                <div className="dropdown-text">Menu</div>
-                <div className={this.state.active ? "dropdown-content active" : "dropdown-content"}>
-                    <div className={this.state.active ? "pointer active" : "pointer"}></div>
-                    <div className={this.state.active ? "dropdown-content-wrapper active" : "dropdown-content-wrapper"}>
-                        {navLink}
-                    </div>
-                </div>
-            </div>
+            <nav>
 
+                    <div className={this.state.active ? "dropdown active" : "dropdown"}>
+                        <button className={this.state.active ? "menuBtn dropdown-btn hamburger hamburger--spin is-active": "menuBtn dropdown-btn hamburger hamburger--spin"} onClick={this.clickHandle.bind(this)}>
+                                  <span className="hamburger-box">
+                                  <span className="hamburger-inner"></span>
+                                </span>
+                        </button>
+                        <div className={this.state.active ? "dropdown-content active" : "dropdown-content"}>
+                            <div className={this.state.active ? "dropdown-content-wrapper active" : "dropdown-content-wrapper"}>
+                                {navLink}
+                            </div>
+                        </div>
+                </div>
+            </nav>
         )
     }
 

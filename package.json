@@ -30,20 +30,22 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "sass-loader": "^7.1.0",
-    "compass-loader": "^0.0.4",
+    "compass-mixins": "^0.12.10",
+    "ruby-sass-loader": "^0.4.0",
     "style-loader": "^0.13.1",
     "webpack-dev-middleware": "^1.10.0",
     "webpack-dev-server": "^3.1.5",
     "webpack-hot-middleware": "^2.22.3",
     "webpack-html-plugin": "^0.1.1",
     "p5": "^0.7.1",
-    "react-p5-wrapper":"^0.0.4"
-},
+    "react-p5-wrapper": "^0.0.4"
+  },
   "devDependencies": {
     "babel-preset-env": "^1.6.1",
     "copy-webpack-plugin": "^4.5.2",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "html-webpack-plugin": "^3.2.0",
+    "mixin-loader": "^2.0.3",
     "webpack": "^4.16.3",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5"

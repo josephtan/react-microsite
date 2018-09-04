@@ -1,0 +1,177 @@
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+
+/**
+############ Colors ################
+**/
+$cyan-bright: #b3f4fc;
+$cyan-light: #00e3ff;
+$cyan: #5489c2;
+$cyan-dark: #6dcff6;
+$blue-light:#5b8fc7;
+$blue:#236ab3;
+$blue-dusk: #23373f;
+$blue-dark: #1b2a36;
+$blue-menu-hover:#23649f;
+$blue-sky:#ecf5ff;
+
+$gray : #494949;
+$gray-bright:#f9f9f9;
+$gray-light : #efefef;
+$gray-light-2 : #eee;
+$gray-light-3 : #ddd;
+$gray-med : #666;
+$gray-dark : #222;
+$gray-dark-2 : #131313;
+$gray-smoke:#666;
+
+$gray-menu-border:#e1e1e1;
+
+$orange: #ffa200;
+$orange-dark:#c17b02;
+
+$voilet: #9b59b6;
+
+$lemon-green:#2ecc71;
+
+$white : #fff;
+$black-space: #141414;
+$black : #000;
+
+$dim : rgba(0,0,0,0.5);
+$error : #f00;
+$red: #cc0000;
+$valid : #089e00;
+$warning : #fff664;
+$information : #000db5;
+
+/*------------------------------------*\
+    $TYPOGRAPHY
+\*------------------------------------*/
+
+$font : "Roboto", "Arial", sans-serif;
+$font-secondary : "Technical Forest", Calibri, serif;
+$font-secondary-bold: "Technical Forest Bold";
+$font-secondary-light:"Technical Forest Light";
+$font-size-small : 0.75rem;
+$font-size-small-2 : 0.875rem;
+$font-size-med : 1rem;
+$font-size-med-2: 1.0625rem;
+$font-size-med-3: 1.2rem;
+$font-size-large : 1.4375rem;
+
+/*------------------------------------*\
+    $MARGIN /PADDING / SPACING
+\*------------------------------------*/
+
+$space : 1em;
+$space-and-half : $space*1.5;
+$space-double : $space*2;
+$space-quad : $space*4;
+$space-half : $space/2;
+$pad-zero:0;
+$pad : 1.0em;
+$pad-no-top: 0 1em 1em;
+$pad-no-top-no-bottom: 0 1em 0;
+$pad-and-half : $pad*1.5;
+$pad-left-right-half:0 $pad/2;
+$pad-double : $pad*2;
+$pad-half : $pad/2;
+$pad-half-no-top: 0 $pad/2;
+$pad-quarter :$pad/4;
+
+
+/*------------------------------------*\
+    $BORDERS
+\*------------------------------------*/
+
+$border-blue-1: 1px solid $cyan;
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+
+// Settings
+// ==================================================
+$hamburger-padding-x                       : 15px !default;
+$hamburger-padding-y                       : 16px !default;
+$hamburger-layer-width                     : 22px !default;
+$hamburger-layer-height                    : 4px !default;
+$hamburger-layer-spacing                   : 4px !default;
+$hamburger-layer-color                     : $cyan-light;
+$hamburger-layer-border-radius             : 4px !default;
+$hamburger-hover-opacity                   : 1 !default;
+$hamburger-hover-color                     : $cyan-light;
+$hamburger-hover-transition-duration       : 0.15s !default;
+$hamburger-hover-transition-timing-function: linear !default;
+
+// To use CSS filters as the hover effect instead of opacity,
+// set $hamburger-hover-use-filter as true and
+// change the value of $hamburger-hover-filter accordingly.
+$hamburger-hover-use-filter: false !default;
+$hamburger-types: (spin)default;
+
+/*------------------------------------*\
+    $CLOCK
+\*------------------------------------*/
+$clock-width:110px;
+$clock-center : $clock-width/2;
+
+/*------------------------------------*\
+    $NAVIGATION
+\*------------------------------------*/
+$menu-btn-width:109px;
+
+
+/*------------------------------------*\
+    $BREAKPOINTS
+\*------------------------------------*/
+$tny_breakpoint: 320px;
+// Tiny Screen, Phone Portrait...
+$tny_breakpoint_inner: $tny_breakpoint - 1;
+$tny_breakpoint_outer: $tny_breakpoint + 1;
+
+$sml_breakpoint: 480px;
+// Small Screen, Phone Landscape...
+$sml_breakpoint_inner: $sml_breakpoint - 1;
+$sml_breakpoint_outer: $sml_breakpoint + 1;
+
+$med_breakpoint: 768px;
+// Medium Screen, Large Phone/Tablet...
+$med_breakpoint_inner: $med_breakpoint - 1;
+$med_breakpoint_outer: $med_breakpoint + 1;
+
+$lrg_breakpoint: 980px;
+// Large Screen, Laptop/Desktop...
+$lrg_breakpoint_inner: $lrg_breakpoint - 1;
+$lrg_breakpoint_outer: $lrg_breakpoint + 1;
+
+$xlg_breakpoint: 1024px;
+// Extra Large Screen, Desktop...
+$xlg_breakpoint_inner: $xlg_breakpoint - 1;
+$xlg_breakpoint_outer: $xlg_breakpoint + 1;
+// Micro Screen, Phone Portrait...
+$bp-micro: 20em;
+// Tiny Screen, Phone Portrait...
+$bp-small : 24em;
+// Small Screen, Phone Landscape...
+$bp-small-2 : 29.75em;
+$bp-small-3 : 39.8em;
+
+// Medium Screen, Large Phone/Tablet...
+$bp-med : 46.8em;
+$bp-med-2 : 48em;
+
+// Large Screen, Laptop/Desktop...
+$bp-large : 50em;
+$bp-large-2 : 66em;
+// Extra Large Screen, Desktop...
+$bp-xl : 73em;
+$bp-x2 : 73.2em;
+$bp-xxl : 89em;
+$bp-xxxl : 93em;

@@ -8,5 +8,9 @@
     padding: 0 $space-double;
   }
 
+  @media screen and (max-width: 1089px){
+    padding: 0 $space-double;
+  }
+
 }
 .columns{margin: 0}

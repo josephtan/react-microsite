@@ -1,5 +1,12 @@
 /*------------------------------------*\
     $MAIN CONTENT AREA
 \*------------------------------------*/
-.container{@include flex( 1 0 auto);}
+.container{@include flex( 1 0 auto);
+  @media screen and (min-width: 1472px){
+    max-width: 100%;
+    width: 100%;
+    padding: 0 $space-double;
+  }
+
+}
 .columns{margin: 0}

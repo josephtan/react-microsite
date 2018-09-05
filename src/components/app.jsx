@@ -6,16 +6,16 @@ import Contact from "./views/contact";
 import Profile from "./views/profile";
 import Portfolio from "./views/portfolio";
 import StarBackground from "./starbackground";
-import client from "./client";
+import axiosOption from "./axiosOption";
 
 class App extends Component {
 
     constructor(props){
         super(props);
-        this.state = {routedata:[]};
+        this.state = {routedata:[],footdata:[]};
     }
     componentDidMount(){
-        client.get("navdata.json")
+        axiosOption.get("navdata.json")
             .then((res)=> {
                 this.setState({
                    routedata : res.data
@@ -43,7 +43,7 @@ class App extends Component {
                 <header className="header">
                     <div>
                         <div id="nav-holder">
-                                <Navigation />
+                           <Navigation />
                         </div>
                         <div className="column">
                             <h1 className="header-title has-text-centered">Joseph Tan</h1>
@@ -52,7 +52,6 @@ class App extends Component {
                 </header>
                 <main role="main" className="container">
                     {RouteTags}
-
                 </main>
                 <footer className="footer">
                     <div className="container">
@@ -66,6 +65,5 @@ class App extends Component {
         );
     }
 }
-
 
 export default App;

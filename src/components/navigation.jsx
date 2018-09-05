@@ -1,9 +1,9 @@
 
 import React, { Component} from "react";
-import { NavLink } from 'react-router-dom';
-import PropTypes from "prop-types";
+import { NavLink } from "react-router-dom";
 import client from "./client";
 import * as d3 from "d3";
+import Clock from "./clock";
 
 // =========
 // NAV ITEMS
@@ -86,7 +86,8 @@ export default class Navigation extends Component{
                         <span className="hamburger-inner"></span>
                     </span>
                 </button>
-                    <span className="text">Menu</span>
+                    <span className="menu-text has-text-centered">Menu</span>
+                    <Clock></Clock>
                 </div>
                 <div className={this.state.active ? "dropdown active" : "dropdown"}>
                         <div className={this.state.active ? "dropdown-content active" : "dropdown-content"}>
@@ -100,13 +101,6 @@ export default class Navigation extends Component{
     }
 
 }
-
-
-Navigation.propTypes = {
-    show: PropTypes.bool.isRequired,
-    showNav: PropTypes.bool.isRequired
-};
-
 Navigation.defaultProps = {
     show: false,
     showNav: true

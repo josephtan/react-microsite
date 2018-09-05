@@ -14,6 +14,11 @@ export default class Navigation extends Component{
     constructor(props){
         super(props);
         this.state = {show: this.props.show, showNav:this.props.showNav, navdata:[]};
+        this.wrapperSelector =".wrapper";
+        this.overlaySelector = ".menu-overlay";
+        this.activeClass = "active";
+        this.openMenuSelector = "open-menu";
+        this.menuBtnText=".text";
     }
 
     componentDidMount(){
@@ -32,11 +37,13 @@ export default class Navigation extends Component{
         const currentNav = this.state.showNav;
         this.setState({ active: !currentState,showNav:!currentNav, show: !this.state.show});
         if(currentNav === true){
-            document.getElementById("wrapper").classList.add("open-menu");
-            document.getElementById("menuOverlay").classList.add("active");
+            document.querySelector(this.wrapperSelector).classList.add(this.openMenuSelector);
+            document.querySelector(this.overlaySelector).classList.add(this.activeClass);
+            document.querySelector(this.menuBtnText).classList.add(this.activeClass);
         } else{
-            document.getElementById("wrapper").classList.remove("open-menu");
-            document.getElementById("menuOverlay").classList.remove("active");
+            document.querySelector(this.wrapperSelector).classList.remove(this.openMenuSelector);
+            document.querySelector(this.overlaySelector).classList.remove(this.activeClass);
+            document.querySelector(this.menuBtnText).classList.remove(this.activeClass);
         }
     }
     clickHandle(){
@@ -56,8 +63,8 @@ export default class Navigation extends Component{
             { "x": -menuRad + menX,  "y": menY},
             { "x": -menuRad / 2 + menX,  "y": -menuRad * _sq32 + menY},
             { "x": menuRad / 2 + menX, "y": -menuRad * _sq32 + menY}];
-        let  strokeC = "#00e3ff", strokeW = 2, fill = "transparent";
-        let menuBtn = d3.select(".menuBtnElements");
+        let strokeW = 2, fill = "transparent";
+        let menuBtn = d3.select(".hex-btn");
         let menuBtnElements = menuBtn.select("path")
             .attr("d", drawHexagon(hexagonData))
             .attr("transform", "translate(" + [margins.left, margins.top] + ")")
@@ -72,14 +79,16 @@ export default class Navigation extends Component{
         });
         return (
             <nav>
-
-                    <div className={this.state.active ? "dropdown active" : "dropdown"}>
-                        <button className={this.state.active ? "menuBtn dropdown-btn hamburger hamburger--spin is-active":"menuBtn dropdown-btn hamburger hamburger--spin"} onClick={this.clickHandle.bind(this)}>
-                            <svg className={"menuBtnElements"}><path></path></svg>
-                              <span className="hamburger-box">
-                                  <span className="hamburger-inner"></span>
-                                </span>
-                        </button>
+                <div className="holder-btn">
+                <button className={this.state.active ? "menu-btn dropdown-btn hamburger hamburger--spin is-active":"menu-btn dropdown-btn hamburger hamburger--spin"} onClick={this.clickHandle.bind(this)}>
+                    <svg className={"hex-btn"}><path></path></svg>
+                    <span className="hamburger-box">
+                        <span className="hamburger-inner"></span>
+                    </span>
+                </button>
+                    <span className="text">Menu</span>
+                </div>
+                <div className={this.state.active ? "dropdown active" : "dropdown"}>
                         <div className={this.state.active ? "dropdown-content active" : "dropdown-content"}>
                             <div className={this.state.active ? "dropdown-content-wrapper active" : "dropdown-content-wrapper"}>
                                 {navLink}

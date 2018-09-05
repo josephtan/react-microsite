@@ -1,7 +1,9 @@
 /*------------------------------------*\
     GLOBAL DECLARATIONS & IMPORTS
 \*------------------------------------*/
-@import "compass";
+@import "compass/css3";
+@import "compass/css3/animation";
+@import "compass/css3/transition";
 @import "vendor/bulma/bulma";
 @import "variables";
 @import "vendor/hamburger/burgerbase";

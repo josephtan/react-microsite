@@ -38,11 +38,11 @@ class App extends Component {
      });
 
     return(
-            <div id="wrapper">
-                <div id="menuOverlay"></div>
+            <div className="wrapper">
+                <div className="menu-overlay"></div>
                 <header className="header">
                     <div>
-                        <div id="navbar">
+                        <div id="nav-holder">
                                 <Navigation />
                         </div>
                         <div className="column">

@@ -75,7 +75,7 @@ export default class Navigation extends Component{
         const navLink = this.state.navdata.map((navlink) => {
             if (this.state.show) {
                 return (
-                    <NavLink key={navlink.url} to={navlink.url}> {navlink.text}</NavLink>)}
+                    <NavLink key={navlink.url} exact={navlink.exact} to={navlink.url}> {navlink.text}</NavLink>)}
         });
         return (
             <nav>

@@ -3,18 +3,19 @@ $NAVIGATION
 \*------------------------------------*/
 #nav-holder{
   @include display-flex;
-  min-height:80px;
+  min-height:105px;
 }
 nav{
   .holder-btn{
     position: absolute;
     left: 50%;
     margin-left: -30px;
-
   }
-  .text{position: absolute; z-index: 4; top: 54px; left: 5px; font-size: 1.2em;
+
+  .menu-text{position: relative; font-size: 1.2em; top: 40px; left: -50px;
    &.active{color: $white}
   }
+
   .menu-btn{
   position: relative;
   z-index: 12;
@@ -39,7 +40,6 @@ nav{
     line-height: 0;
   }
   &:hover{
-
     color: $cyan;
     .fa-bars{ color: $cyan; @include rotate(-90deg);}
     cursor: pointer;
@@ -62,16 +62,22 @@ nav{
   }
 
 }
-  .dropdown{ position: absolute; z-index: 10; width: 100%;}
+  .dropdown{ position: absolute; display: none; z-index: 10; width: 100%;
+   &.active{@include display-flex;}
+  }
+  .dropdown-content-wrapper{min-width: 250px; visibility: hidden;  margin: 10% auto;
+    @include ctm-breakpoint(624px){
+      margin: 12% auto;
+    }
+    &.active{visibility: visible}
+    .dropdown-content{@include display-flex; @include flex-direction(column); background: transparent; border-radius:0px; box-shadow: none; }
+    a{ margin-bottom: $space; padding: $space-half; border:$border-blue-1; text-align: center; color: $white;
+      background: $cyan;
+      &:hover,&.active{background: $white; color: $cyan;}}
+  }
 }
 
-.dropdown-content{min-width: 250px; visibility: hidden; background: transparent; border-radius:0px; box-shadow: none; margin: 10% auto;
-  &.active{visibility: visible}
-  .dropdown-content-wrapper{@include display-flex; @include flex-direction(column); }
-  a{ margin-bottom: $space; padding: $space-half; border:$border-blue-1; text-align: center; color: $white;
-     background: $cyan;
-    &:hover,&.active{background: $white; color: $cyan;}}
-}
+.nav-clock{position: relative; top:25px; left:-25px; border: 1px dashed $cyan}
 
 .menu-overlay{
   position: absolute;

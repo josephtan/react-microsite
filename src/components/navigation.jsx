@@ -1,9 +1,9 @@
 
-import React, { Component} from "react";
+import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import client from "./client";
+import axiosOption from "./axiosOption";
 import * as d3 from "d3";
-import Clock from "./clock";
+import NavClock from "./navClock";
 
 // =========
 // NAV ITEMS
@@ -20,9 +20,8 @@ export default class Navigation extends Component{
         this.openMenuSelector = "open-menu";
         this.menuBtnText=".text";
     }
-
     componentDidMount(){
-        client.get("navdata.json")
+        axiosOption.get("navdata.json")
             .then((res)=> {
                 this.setState({
                     navdata : res.data
@@ -87,11 +86,11 @@ export default class Navigation extends Component{
                     </span>
                 </button>
                     <span className="menu-text has-text-centered">Menu</span>
-                    <Clock></Clock>
+                    <NavClock></NavClock>
                 </div>
                 <div className={this.state.active ? "dropdown active" : "dropdown"}>
-                        <div className={this.state.active ? "dropdown-content active" : "dropdown-content"}>
-                            <div className={this.state.active ? "dropdown-content-wrapper active" : "dropdown-content-wrapper"}>
+                        <div className={this.state.active ? "dropdown-content-wrapper active" : "dropdown-content"}>
+                            <div className={this.state.active ? "dropdown-content active" : "dropdown-content-wrapper"}>
                                 {navLink}
                             </div>
                         </div>

@@ -18,7 +18,7 @@ export default class Navigation extends Component{
         this.overlaySelector = ".menu-overlay";
         this.activeClass = "active";
         this.openMenuSelector = "open-menu";
-        this.menuBtnText=".text";
+        this.menuBtnText=".menu-text";
     }
     componentDidMount(){
         axiosOption.get("navdata.json")
@@ -74,7 +74,7 @@ export default class Navigation extends Component{
         const navLink = this.state.navdata.map((navlink) => {
             if (this.state.show) {
                 return (
-                    <NavLink key={navlink.url} exact={navlink.exact} to={navlink.url}> {navlink.text}</NavLink>)}
+                    <NavLink className="has-text-centered is-white" key={navlink.url} exact={navlink.exact} to={navlink.url}> {navlink.text}</NavLink>)}
         });
         return (
             <nav>
@@ -88,9 +88,9 @@ export default class Navigation extends Component{
                     <span className="menu-text has-text-centered">Menu</span>
                     <NavClock></NavClock>
                 </div>
-                <div className={this.state.active ? "dropdown active" : "dropdown"}>
+                <div className={this.state.active ? "dropdown is-shadowless active " : "dropdown is-shadowless"}>
                         <div className={this.state.active ? "dropdown-content-wrapper active" : "dropdown-content"}>
-                            <div className={this.state.active ? "dropdown-content active" : "dropdown-content-wrapper"}>
+                            <div className={this.state.active ? "dropdown-content is-shadowless active" : "dropdown-content"}>
                                 {navLink}
                             </div>
                         </div>

@@ -106,6 +106,7 @@ $hamburger-hover-transition-timing-function: linear !default;
 $hamburger-hover-use-filter: false !default;
 $hamburger-types: (spin)default;
 
+
 /*------------------------------------*\
     $CLOCK
 \*------------------------------------*/
@@ -116,6 +117,12 @@ $clock-center : $clock-width/2;
     $NAVIGATION
 \*------------------------------------*/
 $menu-btn-width:109px;
+
+/*------------------------------------*\
+    $HEXBUTTON
+\*------------------------------------*/
+
+$hex-btn-wh:52px;
 
 
 /*------------------------------------*\

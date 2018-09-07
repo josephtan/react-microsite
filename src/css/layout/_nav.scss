@@ -1,6 +1,7 @@
 /**------------------------------------*\
 $NAVIGATION
 \*------------------------------------*/
+
 #nav-holder{
   @include display-flex;
   min-height:105px;
@@ -13,7 +14,7 @@ nav{
   }
 
   .menu-text{position: relative; font-size: 1.2em; top: 40px; left: -50px;
-   &.active{color: $white}
+   &.active{@extend .c-text-white;}
   }
 
   .menu-btn{
@@ -24,10 +25,10 @@ nav{
       z-index: 5;
       top:0;
       left:0;
-      width: 52px;
-      height: 52px;
-      max-width: 52px;
-      min-height: 52px;
+      width: $hex-btn-wh;
+      height: $hex-btn-wh;
+      max-width: $hex-btn-wh;
+      min-height: $hex-btn-wh;
       @include rotate(90deg);
       @include animation(0.5s linear spinhexback);
       path{stroke: $cyan}
@@ -40,7 +41,7 @@ nav{
     line-height: 0;
   }
   &:hover{
-    color: $cyan;
+    @extend .c-text-cyan;
     .fa-bars{ color: $cyan; @include rotate(-90deg);}
     cursor: pointer;
     #nav-icon2{
@@ -53,7 +54,7 @@ nav{
   &.is-active{
     svg{path{stroke: $cyan;} @include transition(all, 0.5s, ease-in-out); @include animation(0.5s linear spinhex); @include rotate(0deg);}
     .fa-bars{ color: $cyan; @include rotate(-90deg);}
-    .text{color: $cyan;}
+    .text{@extend .c-text-cyan;}
   }
 
   .hamburger{
@@ -63,7 +64,8 @@ nav{
 
 }
   .dropdown{ position: absolute; display: none; z-index: 10; width: 100%;
-   &.active{@include display-flex;}
+   &.active{@include display-flex;
+   }
   }
   .dropdown-content-wrapper{min-width: 250px; visibility: hidden;  margin: 10% auto;
     @include ctm-breakpoint(624px){
@@ -71,7 +73,7 @@ nav{
     }
     &.active{visibility: visible}
     .dropdown-content{@include display-flex; @include flex-direction(column); background: transparent; border-radius:0px; box-shadow: none; }
-    a{ margin-bottom: $space; padding: $space-half; border:$border-blue-1; text-align: center; color: $white;
+    a{ margin-bottom: $space; padding: $space-half; border:$border-blue-1; @extend .c-text-white;
       background: $cyan;
       &:hover,&.active{background: $white; color: $cyan;}}
   }
@@ -91,14 +93,4 @@ nav{
     bottom:0;
     height: 100%;
   }
-}
-
-@include keyframes(spinhex){
-  from{transform:rotate(-90deg)}
-  to{transform:rotate(0deg)}
-}
-
-@include keyframes(spinhexback){
-  from{transform:rotate(0deg)}
-  to{transform:rotate(-90deg)}
 }

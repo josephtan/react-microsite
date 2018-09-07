@@ -1,0 +1,32 @@
+
+@include keyframes(spinhex){
+  from{transform:rotate(-90deg)}
+  to{transform:rotate(0deg)}
+}
+
+@include keyframes(spinhexback){
+  from{transform:rotate(0deg)}
+  to{transform:rotate(-90deg)}
+}
+
+@include keyframes(easeBtnInLeft){
+  0% {
+    position: absolute;
+    transform: translateX(-100%);
+  }
+  100% {
+    position: relative;
+    transform: translateX(0);
+  }
+}
+
+@include keyframes(easeBtnInRight){
+  0% {
+    position: absolute;
+    transform: translateX(100%);
+  }
+  100% {
+    position: relative;
+    transform: translateX(0);
+  }
+}

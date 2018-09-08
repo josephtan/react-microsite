@@ -8,12 +8,17 @@
 @import "variables";
 @import "vendor/hamburger/burgerbase";
 @import "vendor/hamburger/spin";
-@import "generic/fonts";
+@import "settings/color";
+@import "settings/fonts";
 @import "vendor/fontAwesome/faVariables";
+@import "settings/animation";
+@import "settings/layout";
+
 
 /*------------------------------------*\
     $BREAK POINTS
 \*------------------------------------*/
+
 @import "layout/breakpoints";
 
 /*------------------------------------*\

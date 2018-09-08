@@ -1,2 +1,4 @@
 html,body{height: 100%}
-#app,.wrapper{@include display-flex; @include flex-direction(column); height: 100%}
+#app,.wrapper{@include display-flex; @include flex-direction(column);
+  @extend .width-height-100;
+}

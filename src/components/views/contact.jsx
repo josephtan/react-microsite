@@ -1,5 +1,5 @@
 
-import { browserHistory } from 'react-router';
+import { browserHistory } from "react-router";
 
 
 const Contact =()=> (

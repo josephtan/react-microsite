@@ -2,13 +2,12 @@
 $NAVIGATION
 \*------------------------------------*/
 
-#nav-holder{
+#block__nav{
   @include display-flex;
   min-height:105px;
 }
 nav{
   .holder-btn{
-    position: absolute;
     left: 50%;
     margin-left: -30px;
   }
@@ -30,7 +29,7 @@ nav{
       max-width: $hex-btn-wh;
       min-height: $hex-btn-wh;
       @include rotate(90deg);
-      @include animation(0.5s linear spinhexback);
+      @include animation(0.5s linear spin-hex-c-clockwise);
       path{stroke: $cyan}
     }
 
@@ -52,8 +51,8 @@ nav{
     }
   }
   &.is-active{
-    svg{path{stroke: $cyan;} @include transition(all, 0.5s, ease-in-out); @include animation(0.5s linear spinhex); @include rotate(0deg);}
-    .fa-bars{ color: $cyan; @include rotate(-90deg);}
+    svg{path{stroke: $cyan;} @include transition(all, 0.5s, ease-in-out); @include animation(0.5s linear spin-hex-clockwise); @include rotate(0deg);}
+    .fa-bars{ @extend .c-text-white; @include rotate(-90deg);}
     .text{@extend .c-text-cyan;}
   }
 
@@ -72,10 +71,17 @@ nav{
       margin: 12% auto;
     }
     &.active{visibility: visible}
-    .dropdown-content{@include display-flex; @include flex-direction(column); background: transparent; border-radius:0px; box-shadow: none; }
+    .dropdown-content{@include display-flex; @include flex-direction(column); background: transparent; border-radius:0px; }
     a{ margin-bottom: $space; padding: $space-half; border:$border-blue-1; @extend .c-text-white;
       background: $cyan;
-      &:hover,&.active{background: $white; color: $cyan;}}
+      &:nth-child(odd){
+        @include animation(0.8s linear fly-in-btn-left);
+      }
+      &:nth-child(even){
+        @include animation(0.8s linear fly-in-btn-right);
+      }
+      &:hover,&.active{background: $white; color: $cyan;
+      }}
   }
 }
 

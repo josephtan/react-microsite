@@ -40,20 +40,20 @@ class App extends Component {
     return(
             <div className="wrapper">
                 <div className="menu-overlay"></div>
-                <header className="header">
+                <header className="header block__relative">
                     <div>
-                        <div id="nav-holder">
+                        <div id="block__nav">
                            <Navigation />
                         </div>
-                        <div className="column">
+                        <div className="column block__relative">
                             <h1 className="header-title has-text-centered">Joseph Tan</h1>
                         </div>
                     </div>
                 </header>
-                <main role="main" className="container">
+                <main role="main" className="main-container container">
                     {RouteTags}
                 </main>
-                <footer className="footer">
+                <footer className="footer block__relative text-white">
                     <div className="container">
                         <div className="has-text-centered">
                             <h4>test</h4>

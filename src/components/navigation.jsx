@@ -78,7 +78,7 @@ export default class Navigation extends Component{
         });
         return (
             <nav>
-                <div className="holder-btn">
+                <div className="holder-btn block__absolute">
                 <button className={this.state.active ? "menu-btn dropdown-btn hamburger hamburger--spin is-active":"menu-btn dropdown-btn hamburger hamburger--spin"} onClick={this.clickHandle.bind(this)}>
                     <svg className={"hex-btn"}><path></path></svg>
                     <span className="hamburger-box">

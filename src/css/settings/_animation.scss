@@ -1,32 +1,46 @@
 
-@include keyframes(spinhex){
+@include keyframes(spin-hex-clockwise){
   from{transform:rotate(-90deg)}
   to{transform:rotate(0deg)}
 }
 
-@include keyframes(spinhexback){
+@include keyframes(spin-hex-c-clockwise){
   from{transform:rotate(0deg)}
   to{transform:rotate(-90deg)}
 }
 
-@include keyframes(easeBtnInLeft){
+@include keyframes(fly-in-btn-left){
   0% {
-    position: absolute;
-    transform: translateX(-100%);
+    position: relative;
+    transform: translateX(-400%);
   }
-  100% {
+  50% {
     position: relative;
     transform: translateX(0);
+  }
+  51%{
+    transform: rotateX(0deg);
+  }
+
+  100%{
+    transform: rotateX(360deg);
   }
 }
 
-@include keyframes(easeBtnInRight){
+@include keyframes(fly-in-btn-right){
   0% {
-    position: absolute;
-    transform: translateX(100%);
+    position: relative;
+    transform: translateX(400%);
   }
-  100% {
+  50% {
     position: relative;
     transform: translateX(0);
+  }
+  51%{
+    transform: rotateX(0deg);
+  }
+
+  100%{
+    transform: rotateX(360deg);
   }
 }

@@ -4,8 +4,8 @@ import Navigation from "./navigation";
 import Home from "./views/home";
 import Contact from "./views/contact";
 import Profile from "./views/profile";
+import Blog from "./views/blog";
 import Portfolio from "./views/portfolio";
-import StarBackground from "./starbackground";
 import axiosOption from "./axiosOption";
 
 class App extends Component {
@@ -30,6 +30,7 @@ class App extends Component {
             "Home": Home,
             "Contact" :Contact,
             "Profile" :Profile,
+            "Blog" : Blog,
             "Portfolio": Portfolio
     };
 

@@ -19,5 +19,7 @@
 .columns{margin: 0}
 
 .page-home{
-  .fed{font-size: 4em;}
+  p{@extend .block__relative; font-size: 2.5em; span{@extend .is-inline-block;}}
+  .fee{margin-top:-2em;}
+  .fsd{margin-top:1em;}
 }

@@ -1,3 +1,5 @@
+html,body{background: $gray-dark}
+
 .block{
   @extend .is-block;
 }
@@ -14,4 +16,12 @@
 .width-height-100{
   width: 100%;
   height: 100%;
+}
+h1,h2,h3,h4,h5{color: $white; word-break: break-all}
+
+p{color: $white;word-break: break-all}
+
+ul{max-width: 1280px;
+   margin: $space auto;
+  li{list-style: disc; color:$white}
 }

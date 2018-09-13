@@ -23,5 +23,6 @@ p{color: $white;word-break: break-all}
 
 ul{max-width: 1280px;
    margin: $space auto;
+   padding: 0 $space-double;
   li{list-style: disc; color:$white}
 }

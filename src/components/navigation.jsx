@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import axiosOption from "./axiosOption";
@@ -19,6 +18,7 @@ export default class Navigation extends Component{
         this.activeClass = "active";
         this.openMenuSelector = "open-menu";
         this.menuBtnText=".menu-text";
+        this.hexSelector=".hex-btn";
     }
     componentDidMount(){
         axiosOption.get("navdata.json")
@@ -35,6 +35,13 @@ export default class Navigation extends Component{
         const currentState = this.state.active;
         const currentNav = this.state.showNav;
         this.setState({ active: !currentState,showNav:!currentNav, show: !this.state.show});
+    }
+    clickHandle(){
+        this.toggleShow();
+        this.toggleClasses();
+    }
+    toggleClasses(){
+        const currentNav = this.state.showNav;
         if(currentNav === true){
             document.querySelector(this.wrapperSelector).classList.add(this.openMenuSelector);
             document.querySelector(this.overlaySelector).classList.add(this.activeClass);
@@ -44,9 +51,6 @@ export default class Navigation extends Component{
             document.querySelector(this.overlaySelector).classList.remove(this.activeClass);
             document.querySelector(this.menuBtnText).classList.remove(this.activeClass);
         }
-    }
-    clickHandle(){
-        this.toggleShow();
     }
     renderHex(){
         let margins = {top: -22, left: -22};
@@ -63,7 +67,7 @@ export default class Navigation extends Component{
             { "x": -menuRad / 2 + menX,  "y": -menuRad * _sq32 + menY},
             { "x": menuRad / 2 + menX, "y": -menuRad * _sq32 + menY}];
         let strokeW = 2, fill = "transparent";
-        let menuBtn = d3.select(".hex-btn");
+        let menuBtn = d3.select(this.hexSelector);
         let menuBtnElements = menuBtn.select("path")
             .attr("d", drawHexagon(hexagonData))
             .attr("transform", "translate(" + [margins.left, margins.top] + ")")

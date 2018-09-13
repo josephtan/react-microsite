@@ -4,9 +4,10 @@
 .main-container{
  &.container{
    @extend .flex__1;
+   @include align-items(justify);
  }
   @media screen and (min-width: 1472px){
-    max-width: 100%;
+    max-width: 1280px;
     width: 100%;
     padding: 0 $space-double;
   }
@@ -18,8 +19,17 @@
 }
 .columns{margin: 0}
 
-.page-home{
-  p{@extend .block__relative; font-size: 2.5em; span{@extend .is-inline-block;}}
-  .fee{margin-top:-2em;}
-  .fsd{margin-top: 2em;}
+.page-home,.page-profile,.page-portfolio,.page-blog,.page-contact{
+  h2{font-size: 3.0em; margin-bottom: $space; }
+  h3{@include display-flex; @include align-items(center); @include justify-content(center);
+    font-size: 2.5em; span{@extend .is-inline-block;}
+    &.fee{margin-top:-$space-double;}
+    &.description{margin-top: $space-double; font-size:1.2em}
+    @include sml-breakpoint(){
+      font-size: 2.0em;
+    }
+  }
+  p{@extend .block__relative; margin: $space-double 0; span{@extend .is-inline-block;}
+   &.med-width{max-width: 1280px; margin: $space-double auto; word-break: break-word}
+  }
 }

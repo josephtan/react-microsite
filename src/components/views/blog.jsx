@@ -3,4 +3,5 @@ const Blog =()=> (
         <p>this blog page</p>
     </div>
 );
+
 export default Blog;

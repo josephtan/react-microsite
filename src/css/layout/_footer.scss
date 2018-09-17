@@ -13,7 +13,7 @@
 	}
 
 
-	h4{ @extend .is-inline; width: auto; text-align: center; font-size: 1.1rem; font-weight: normal;}
+	h4{ @extend .is-inline; width: auto; text-align: center; font-size: 1.0em; font-weight: normal;}
 	padding-bottom: 1em;
 	@include ctm-breakpoint(1245px){
 		max-height: 100%;

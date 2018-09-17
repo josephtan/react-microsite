@@ -1,11 +1,32 @@
 /**
  ######## Font includes ########
 **/
-@include font-face("FontAwesome", font-files("fontawesome-webfont.ttf" , "fontawesome-webfont.eot","fontawesome-webfont.svg", "fontawesome-webfont.woff", "fontawesome-webfont.woff2"));
+$fa-font-path:        "../fonts" !default;
+$fa-font-size-base:   14px !default;
+$fa-line-height-base: 1 !default;
+//$fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.6.3/fonts" !default; // for referencing Bootstrap CDN font files directly
+$fa-css-prefix:       fa !default;
+$fa-version:          "4.6.3" !default;
+$fa-border-color:     #eee !default;
+$fa-inverse:          #fff !default;
+$fa-li-width:         (30em / 14) !default;
 
-@include font-face("FontMfizz", font-files("font-mfizz.ttf" , "font-mfizz.eot","font-mfizz.svg", "font-mfizz.woff", "font-mfizz.woff2"));
+/**
+ ######## Font includes ########
+**/
+@font-face {
+  font-family: "FontAwesome";
+  src: url("../fonts/fontawesome-webfont.eot?") format("eot"),
+  url("../fonts/fontawesome-webfont.woff2") format("woff2"),
+  url("../fonts/fontawesome-webfont.woff") format("woff"),
+  url("../fonts/fontawesome-webfont.ttf") format("truetype"),
+  url("../fonts/fontawesome-webfont.svg#FontAwesome") format("svg");
+}
+
+/*@include font-face("FontAwesome","../fonts/fontawesome-webfont");*/
 /**
  ######## Font classes ########
 **/
-.font-fa {font-family: "FontAwesome"}
+.font-fa {font-family: "FontAwesome"; font-size:2.6em;}
 .font-fmizz{font-family: "FontMfizz"}
+.fa-github{&::before{content: $fa-var-github;}}

@@ -22,9 +22,10 @@
     "babel-preset-react": "^6.24.1",
     "body-parser": "^1.16.1",
     "css-loader": "^0.26.1",
+    "file-loader": "^2.0.0",
     "express": "^4.14.1",
     "json-loader": "^0.5.7",
-    "node-sass": "^4.5.0",
+    "node-sass": "^4.9.3",
     "bulma": "^0.7.1",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
@@ -34,6 +35,8 @@
     "compass-mixins": "^0.12.10",
     "ruby-sass-loader": "^0.4.0",
     "style-loader": "^0.13.1",
+    "resolve-url-loader": "^3.0.0",
+    "url-loader": "^1.1.1",
     "webpack-dev-middleware": "^1.10.0",
     "webpack-dev-server": "^3.1.5",
     "webpack-hot-middleware": "^2.22.3",
@@ -41,8 +44,8 @@
     "react-transition-group": "^2.4.0",
     "p5": "^0.7.1",
     "d3": "^5.7.0",
-    "animejs":"^2.2.0",
-    "react-anime":"^2.1.0",
+    "animejs": "^2.2.0",
+    "react-anime": "^2.1.0",
     "react-p5-wrapper": "^0.0.4"
   },
   "devDependencies": {
@@ -51,7 +54,7 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "html-webpack-plugin": "^3.2.0",
     "mixin-loader": "^2.0.3",
-    "webpack": "^4.16.3",
+    "webpack": "^4.19.0",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5"
   }

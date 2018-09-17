@@ -33,3 +33,11 @@
    &.med-width{max-width: 1280px; margin: $space-double auto; word-break: break-word}
   }
 }
+
+.draw-hex{
+  @extend .block__relative;
+   width: $hex-home-wh;
+   height: $hex-home-wh;
+  span{@extend .block__absolute; z-index: 2}
+  svg{overflow: hidden; @extend .width-height-100}
+  path{@extend .block__absolute; stroke: $cyan; z-index: 4} }

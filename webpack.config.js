@@ -3,7 +3,7 @@ const path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const buildPath = "/public/";
+const buildPath = "/public";
 module.exports = {
   mode: "development",
   context: __dirname,
@@ -23,6 +23,7 @@ module.exports = {
                   presets: ["react", "env"]
               }
           },
+
           {
               test: /\.scss$/,
               use: ExtractTextPlugin.extract({
@@ -33,19 +34,22 @@ module.exports = {
               })
           },
           {
-             test:/\.scss$/,
-             loader:"sass-loader",
-              options: {   includePaths: [path.resolve(__dirname,"node_modules/compass-mixins/lib")]}
-          },
-          {test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+              test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
               use: [{
-                  loader: "file-loader",
+                  loader: "url-loader",
                   options: {
-                      name: "[name].[ext]",
-                      outputPath: "fonts/"
+                      mimetype: "application/font-woff",
+                      name: "/fonts/[name].[ext]",
+                      limit:50000
                   }
               }]
-          }
+          },
+          {
+             test:/\.scss$/,
+             loader:"sass-loader",
+              options: {   includePaths: [path.resolve(__dirname,"node_modules/compass-mixins/lib")], sourceMap: true, sourceMapContents: false}
+          },
+
       ]
     },
   resolve: {
@@ -54,7 +58,8 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin({ filename: "app.css", allChunks: true }),
       new CopyWebpackPlugin([
-          {from:"./src/data",to:"./src/data"}
+          {from:"./src/data",to:"./data"},
+          {from:"./src/fonts",to:"./fonts"}
       ]),
       new webpack.ProvidePlugin({
           "React": "react",

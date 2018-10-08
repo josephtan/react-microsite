@@ -6,7 +6,7 @@ export default class DrawPolygon extends Component {
      super(props);
      this.polygonSelector = ".draw-hex";
      this.marginTop = -12;
-     this.marginLeft = -12;
+     this.marginLeft = -14;
      this.hexWidth = 66;
      this.hexHeight = 66;
      this.hexRadius =  52;
@@ -30,7 +30,10 @@ export default class DrawPolygon extends Component {
             { "x": hexRad / 2 + hexX,"y": -hexRad * _sq32 + hexY}];
         let strokeW = 2, fill = "transparent";
         let polygonSelector = d3.selectAll(polygon).append("svg");
-             polygonSelector.append("path")
+             polygonSelector.attr("preserveAspectRatio","none");
+             polygonSelector.append("clipPath")
+            .attr("id","maskPath")
+            .append("path")
             .attr("class", "hex-path")
             .attr("d", drawHexagon(hexagonData))
             .attr("transform", "translate(" + [margins.left, margins.top] + ")")
@@ -41,13 +44,19 @@ export default class DrawPolygon extends Component {
         return(
             <div className="block__relative home-skillsets">
                 <div className="draw-hex">
-                    <span className="font-fa fa-github"></span>
+                    <div className="masked-div">
+                        <span className="font-fa fa-github"></span>
+                    </div>
                 </div>
                 <div className="draw-hex">
+                    <div className="masked-div">
                     <span className="font-fa fa-github"></span>
+                    </div>
                 </div>
                 <div className="draw-hex">
-                    <span className="font-fa fa-github"></span>
+                    <div className="masked-div">
+                        <span className="font-fa fa-github"></span>
+                    </div>
                 </div>
             </div>
         );

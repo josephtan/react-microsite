@@ -33,11 +33,16 @@
    &.med-width{max-width: 1280px; margin: $space-double auto; word-break: break-word}
   }
 }
-
+.home-skillsets{@include display-flex;  @include justify-content(center);}
 .draw-hex{
   @extend .block__relative;
-   width: $hex-home-wh;
-   height: $hex-home-wh;
-  span{@extend .block__absolute; z-index: 2}
-  svg{overflow: hidden; @extend .width-height-100}
-  path{@extend .block__absolute; stroke: $cyan; z-index: 4} }
+  @extend .block_inline;
+  width: $hex-home-wh;
+  height: $hex-home-wh;
+  overflow: hidden;
+  margin-right: $space-double;
+  div{@extend .block__absolute; width: $hex-home-wh; height: $hex-home-wh; overflow: hidden; }
+  span{@extend .block__relative; top:22%; left:-10%;  z-index: 0}
+  svg { @extend .block__relative; @extend .width-height-100; margin: 0; padding: 0;}
+  .masked-div{background: $cyan; -webkit-clip-path:url("#maskPath"); clip-path: url("#maskPath");}
+}

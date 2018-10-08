@@ -9,6 +9,9 @@ html,body{background: $gray-dark}
 .block__absolute{
   position: absolute;
 }
+.block_inline{
+  display: inline-block;
+}
 .flex__1{
   @include flex( 1 0 auto);
 }

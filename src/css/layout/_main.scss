@@ -41,8 +41,12 @@
   height: $hex-home-wh;
   overflow: hidden;
   margin-right: $space-double;
+  -webkit-clip-path:url("#maskPath"); clip-path: url("#maskPath");
+  background: $cyan;
   div{@extend .block__absolute; width: $hex-home-wh; height: $hex-home-wh; overflow: hidden; }
   span{@extend .block__relative; top:22%; left:-10%;  z-index: 0}
-  svg { @extend .block__relative; @extend .width-height-100; margin: 0; padding: 0;}
-  .masked-div{background: $cyan; -webkit-clip-path:url("#maskPath"); clip-path: url("#maskPath");}
+  svg { @extend .block__relative; @extend .width-height-100; margin: 0; padding: 0;
+  path{stroke: $cyan;}
+  }
+  .masked-div{@extend .block__absolute; top:2px; left:2px; background: $gray-dark; -webkit-clip-path:url("#hexMask"); clip-path: url("#hexMask");}
 }

@@ -35,7 +35,6 @@ export default class DrawPolygon extends Component {
             { "x": -hexRad + hexX,"y": hexY},
             { "x": -hexRad / 2 + hexX,"y": -hexRad * _sq32 + hexY},
             { "x": hexRad / 2 + hexX,"y": -hexRad * _sq32 + hexY}];
-        let strokeW = 2, fill = "transparent";
         let polygonSelector = d3.selectAll(polygon).append("svg");
              polygonSelector.attr("preserveAspectRatio","none");
              polygonSelector.append("defs")
@@ -60,7 +59,6 @@ export default class DrawPolygon extends Component {
             { "x": -hexRad + hexX,"y": hexY},
             { "x": -hexRad / 2 + hexX,"y": -hexRad * _sq32 + hexY},
             { "x": hexRad / 2 + hexX,"y": -hexRad * _sq32 + hexY}];
-        let strokeW = 2, fill = "transparent";
         let maskSelector = d3.selectAll(mask).append("svg");
         maskSelector.attr("preserveAspectRatio","none");
         maskSelector.append("defs")

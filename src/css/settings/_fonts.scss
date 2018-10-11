@@ -23,10 +23,33 @@ $fa-li-width:         (30em / 14) !default;
   url("../fonts/fontawesome-webfont.svg#FontAwesome") format("svg");
 }
 
+@font-face {
+  font-family: "FontAwesomeBrands";
+  src: url("../fonts/fa-brands-400.eot?") format("eot"),
+  url("../fonts/fa-brands-400.woff2") format("woff2"),
+  url("../fonts/fa-brands-400.woff") format("woff"),
+  url("../fonts/fa-brands-400.ttf") format("truetype"),
+  url("../fonts/fa-brands-400.svg#FontAwesome") format("svg");
+}
+
+
 /*@include font-face("FontAwesome","../fonts/fontawesome-webfont");*/
 /**
  ######## Font classes ########
 **/
 .font-fa {font-family: "FontAwesome"; font-size:2.6em;}
-.font-fmizz{font-family: "FontMfizz"}
+.font-fa-brands {font-family: "FontAwesomeBrands"; font-size:2.6em;}
 .fa-github{&::before{content: $fa-var-github;}}
+.fa-html5{&::before{content: $fa-var-html5;}}
+.fa-css3{&::before{content: $fa-var-css3;}}
+.fa-sass{&::before{content: $fa-var-sass;}}
+.fa-less{&::before{content: $fa-var-less;}}
+.fa-js{&::before{content: $fa-var-js;}}
+.fa-node{&::before{content: $fa-var-node;}}
+.fa-angular{&::before{content: $fa-var-angular;}}
+.fa-react{&::before{content: $fa-var-react;}}
+.fa-grunt{&::before{content: $fa-var-grunt;}}
+.fa-gulp{&::before{content: $fa-var-gulp;}}
+.fa-npm{&::before{content: $fa-var-npm;}}
+.fa-aws{&::before{content: $fa-var-aws;}}
+.fa-paypal{&::before{content: $fa-var-paypal;}}

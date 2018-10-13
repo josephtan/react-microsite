@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import {NavLink} from "react-router-dom";
+import ReactDOM from "react-dom";
 import axiosOption from "./axiosOption";
+import {drawPolygon} from "./drawPolygon";
 
 export default class PopupBox extends Component{
     constructor(props){
         super(props);
-        this.state = {show: this.props.show, showPopUp:this.props.showPopUp, portfoliodata:[]};
+        this.state = {showPopUp:this.props.showPopUp, portfoliodata:[]};
     }
-
     componentDidMount(){
         axiosOption.get("portfoliodata.json")
             .then((res)=> {
@@ -18,34 +18,31 @@ export default class PopupBox extends Component{
             console.log(err);
         });
     }
-    togglePopUp(popupSelector){
+    clickHandle(items){
+        this.togglePopUp(items);
+    }
+    togglePopUp(items){
         const currentState = this.state.active;
-        const currentItem = this.state.showPopUp;
-        this.setState({ active: !currentState,showPopUp:!currentItem, show: !this.state.show});
+        this.setState({ active: !currentState,showPopUp: items.index});
     }
 
     render(){
-        const imagePath = require.context("./images/", true);
-        const images =[
-            "image-1.jpg",
-            "image-2.jpg",
-            "image-3.jpg",
-            "image-4.jpg",
-            "image-5.jpg",
-        ];
-        const itemList = this.state.portfoliodata.map((items) => {
-                return(<li className="itemlist" key={items.index}><img src={"/images/".concat(items.image)}/></li>);
+        const itemList = this.state.portfoliodata.map((items,i) => {
+            return(<li key={i} onClick={this.clickHandle.bind(this,items)}>
+                <img className="thumbnail" src={require("../images/".concat(items.thumb))} alt={items.text} />
+                <div className={this.state.active === true && this.state.showPopUp === items.index  ? "popup active" : "popup"}>
+                    <div className="popup-content">
+                        <button onClick={this.clickHandle.bind(this,items)}>Close</button>
+                        <img src={require("../images/".concat(items.image))} alt={items.text} width="800" height="600" />
+                    </div>
+                </div>
+            </li>);
         });
         return(
-            <div>
-                <ul>
+            <div className="portfolio-thumbnails">
+                <ul className="no-liststyle">
                     {itemList}
                 </ul>
             </div>
         )
     }}
-
-PopupBox.defaultProps = {
-    show: false,
-    showPopUp: false
-};

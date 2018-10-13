@@ -50,10 +50,23 @@
   }
   .masked-div{@extend .block__absolute; top:2px; left:2px; background: $gray-dark; -webkit-clip-path:url("#hexMask"); clip-path: url("#hexMask");
     ul{@extend .block__relative; margin: 0; padding: 0;  width: $hex-home-wh; height: $hex-home-wh; overflow: hidden;
-      li{ @extend .block__absolute;  width: $hex-home-wh; height: $hex-home-wh; list-style: none; top:-80%;
+      li{ @extend .block__absolute;  width: $hex-home-wh; height: $hex-home-wh;top:-80%;
         &.motion{ @include animation(cycle 6s ease-in-out infinite)}
       }
     }
     span{display: block; color: $white; text-align: center; }
   }
+}
+
+.page-portfolio{
+  .portfolio-thumbnails{
+    ul{@include display-flex;
+    li{margin-right: $space; border:1px solid $cyan; overflow: hidden; @include border-radius(20px);
+      .thumbnail{display: block; width: 100%; height: 100%;}
+      @include flex-direction(row);
+      .popup{display: none; @extend .block__absolute; width: 100%; height: 120%; top:-20%; left:0; background: rgba(0,0,0,0.5); z-index: 12;
+        &.active{display: block;
+          .popup-content{@extend .block__relative; padding: $space-double;  img{margin: 0 auto;}}
+       button{position: absolute; top:2%; right:2%; &:hover{cursor: pointer}}}}
+    }}}
 }

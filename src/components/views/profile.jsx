@@ -2,9 +2,6 @@ import AnimateText from "../animateText";
 import Anime from "react-anime";
 import React from "react";
 
-let aniText = new AnimateText();
-let description = "I am a professional full-stack developer that primarily builds websites on PHP based open source CMS and moving towards node.js. My variety of work involvement has grown my skills over to web design, "
-    +"accessibility and basic server administration.";
 const Profile=()=> (
     <div className="page-profile has-text-centered">
         <h2>Profile</h2>

@@ -101,7 +101,7 @@ export default class DrawPolygon extends Component {
             <div className="block__relative home-skillsets">
                 <div className="draw-hex">
                     <div className="masked-div">
-                        <ul className="logo-list" ref="logoList">
+                        <ul className="logo-list no-liststyle" ref="logoList">
                             <li><span className="font-fa fa-github"></span></li>
                             <li><span className="font-fa-brands fa-npm"></span></li>
                             <li><span className="font-fa-brands fa-aws"></span></li>
@@ -112,7 +112,7 @@ export default class DrawPolygon extends Component {
                 </div>
                 <div className="draw-hex">
                     <div className="masked-div">
-                        <ul className="logo-list" ref="logoList2">
+                        <ul className="logo-list no-liststyle" ref="logoList2">
                             <li><span className="font-fa-brands fa-html5"></span></li>
                             <li><span className="font-fa-brands fa-css3"></span></li>
                             <li><span className="font-fa-brands fa-sass"></span></li>
@@ -121,7 +121,7 @@ export default class DrawPolygon extends Component {
                 </div>
                 <div className="draw-hex">
                     <div className="masked-div">
-                        <ul className="logo-list" ref="logoList3">
+                        <ul className="logo-list no-liststyle" ref="logoList3">
                             <li><span className="font-fa-brands fa-js"></span></li>
                             <li><span className="font-fa-brands fa-node"></span></li>
                             <li><span className="font-fa-brands fa-react"></span></li>

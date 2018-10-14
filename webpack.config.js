@@ -48,13 +48,12 @@ module.exports = {
              test:/\.scss$/,
              loader:"sass-loader",
               options: {   includePaths: [path.resolve(__dirname,"node_modules/compass-mixins/lib")], sourceMap: true, sourceMapContents: false}
-          },{
+          },
+          {
               test: /\.(png|jp(e*)g|gif)$/,
               use: [{
                   loader: "file-loader",
-                  include: "./images",
                   options: {
-                    //  limit: 8000, // Convert images < 8kb to base64 strings
                       name: "/images/[name].[ext]"
                   }
               }]
@@ -85,7 +84,7 @@ module.exports = {
       })
   ],
   devServer: {
-    inline: false,
-    historyApiFallback: true,
+      inline: false,
+      historyApiFallback: true,
   }
 };

@@ -1,0 +1,22 @@
+.page-portfolio{
+  .portfolio-thumbnails{
+    max-width: 1080px;
+    margin: 0 auto;
+    ul{display: block; width: 100%;
+      li{display: inline-block; width: 18%; margin-right: $space; border:1px solid $cyan; overflow: hidden; @include border-radius(10px); margin-bottom: $space;
+        a{@extend .block__relative; display: block;
+        }
+        .popup{display: none; @extend .block__absolute; width: 100%; height: 100%; top:-35%; left:0; z-index: 12;
+          &.active{display: block;
+            .popup-content{@extend .block__relative; padding: $space-double; border:1px solid $cyan; background: $black;
+              img{margin: 0 auto;}
+            }
+            button{position: absolute; top:2%; right:2%; background:none; border:0; color:$cyan; &:hover{cursor: pointer}}}}
+      }}}
+  .thumbnail{display: block; width: 100%; height: 100%;}
+  .popup-tooltip{@extend .block__absolute; width: 100%; z-index: 10; bottom:-20%; background:rgba(0,0,0,0.8);
+    &.slidedown{@include animation(tooltip-slidedown 0.5s linear);}
+    &.slideup{display: block; bottom:0; @include animation(tooltip-slideup 0.5s linear)}
+    span{display: block; color: $cyan}
+  }
+}

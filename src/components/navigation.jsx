@@ -78,7 +78,7 @@ export default class Navigation extends Component{
         const navLink = this.state.navdata.map((navlink) => {
             if (this.state.show) {
                 return (
-                    <NavLink className="has-text-centered is-white" key={navlink.url} exact={navlink.exact} to={navlink.url}> {navlink.text}</NavLink>)}
+                    <NavLink onClick={this.clickHandle.bind(this)} className="has-text-centered is-white" key={navlink.url} exact={navlink.exact} to={navlink.url}> {navlink.text}</NavLink>)}
         });
         return (
             <nav>

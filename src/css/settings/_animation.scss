@@ -1,3 +1,17 @@
+/**------------------------------------*\
+No Animation on preload
+\*------------------------------------*/
+
+.not-animate{
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+/**------------------------------------*\
+MENU HEX BUTTON ROTATE
+\*------------------------------------*/
 
 @include keyframes(spin-hex-clockwise){
   from{transform:rotate(-90deg)}
@@ -8,6 +22,11 @@
   from{transform:rotate(0deg)}
   to{transform:rotate(-90deg)}
 }
+
+/**------------------------------------*\
+NAVIGATION BUTTON FLY IN ANIMATION
+\*------------------------------------*/
+
 
 @include keyframes(fly-in-btn-left){
   0% {
@@ -60,4 +79,19 @@ LOGO SLOT ANIMATION PROPERTIES
   96% { top:-80%;  }
   100%{ top:-80%;  }
 
+}
+
+/**------------------------------------*\
+TOOLTIP FLOAT UP
+\*------------------------------------*/
+
+@include keyframes(tooltip-slideup){
+  0%{bottom:-20%;}
+  50%{bottom:-15%}
+  100%{bottom:0;}
+}
+@include keyframes(tooltip-slidedown){
+  0%{bottom:0%;}
+  50%{bottom:-15%}
+  100%{bottom:-20%}
 }

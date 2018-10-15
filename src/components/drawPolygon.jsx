@@ -102,7 +102,7 @@ export default class DrawPolygon extends Component {
                 <div className="draw-hex">
                     <div className="masked-div">
                         <ul className="logo-list no-liststyle" ref="logoList">
-                            <li><span className="font-fa fa-github"></span></li>
+                            <li><span className="font-fa-brands fa-github"></span></li>
                             <li><span className="font-fa-brands fa-npm"></span></li>
                             <li><span className="font-fa-brands fa-aws"></span></li>
                             <li><span className="font-fa-brands fa-paypal"></span></li>

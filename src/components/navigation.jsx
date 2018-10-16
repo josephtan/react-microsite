@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import axiosOption from "./axiosOption";
+import {axiosInstance} from "./axiosOption";
 import * as d3 from "d3";
 import NavClock from "./navClock";
 
@@ -21,7 +21,7 @@ export default class Navigation extends Component{
         this.hexSelector=".hex-btn";
     }
     componentDidMount(){
-        axiosOption.get("navdata.json")
+        axiosInstance.get("navdata.json")
             .then((res)=> {
                 this.setState({
                     navdata : res.data

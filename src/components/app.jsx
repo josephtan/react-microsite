@@ -6,7 +6,7 @@ import Contact from "./views/contact";
 import Profile from "./views/profile";
 import Blog from "./views/blog";
 import Portfolio from "./views/portfolio";
-import axiosOption from "./axiosOption";
+import {axiosInstance} from "./axiosOption";
 
 class App extends Component {
 
@@ -15,7 +15,7 @@ class App extends Component {
         this.state = {routedata:[],footdata:[]};
     }
     componentDidMount(){
-        axiosOption.get("navdata.json")
+        axiosInstance.get("navdata.json")
             .then((res)=> {
                 this.setState({
                    routedata : res.data

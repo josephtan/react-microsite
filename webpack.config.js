@@ -3,15 +3,17 @@ const path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const buildPath = "/public";
+const APP_PATH ="./src";
+const BUILD_PATH = "public";
+const PUBLIC_PATH = "./";
 module.exports = {
   mode: "development",
   context: __dirname,
-  entry: "./src/index.jsx",
+  entry: APP_PATH + "/index.jsx",
   output: {
-    path: __dirname + "/public",
+    path: path.resolve(BUILD_PATH),
     filename: "bundle.js",
-    publicPath: buildPath
+    publicPath: PUBLIC_PATH
   },
   module: {
       rules: [

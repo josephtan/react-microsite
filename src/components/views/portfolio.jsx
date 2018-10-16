@@ -1,4 +1,3 @@
-import popUpBox from "../PopupBox";
 import PopupBox from "../popupBox";
 const Portfolio=()=> (
     <div className="page-portfolio has-text-centered">

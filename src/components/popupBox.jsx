@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axiosOption from "./axiosOption";
+import {axiosInstance} from "./axiosOption";
 import {drawPolygon} from "./drawPolygon";
 
 export default class PopupBox extends Component{
@@ -12,7 +12,7 @@ export default class PopupBox extends Component{
         this.activeClass = "active";
     }
     componentDidMount(){
-        axiosOption.get("portfoliodata.json")
+        axiosInstance.get("portfoliodata.json")
             .then((res)=> {
                 this.setState({
                     portfoliodata : res.data
@@ -39,15 +39,12 @@ export default class PopupBox extends Component{
         }
     }
     mouseOver(items){
-        document.querySelector(".popup-tooltip").classList.remove("slidedown");
        const currentPopUp = items.index;
        this.setState({thisMouseOver: true, currentPopUp:currentPopUp});
-
     }
     mouseOut(items){
         const currentPopUp = items.index;
         this.setState({thisMouseOver:false,currentPopUp:currentPopUp});
-        document.querySelector(".popup-tooltip").classList.add("slidedown");
     }
     render(){
         const itemList = this.state.portfoliodata.map((items,i) => {

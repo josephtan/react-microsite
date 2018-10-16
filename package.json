@@ -6,9 +6,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --hot --inline",
     "start": "node server.js",
-    "build": "webpack"
+    "build": "webpack",
+    "prod": "webpack --env prod --progress --profile --colors"
   },
-  "main": "server.js",
+  "main": "index.jsx",
   "engines": {
     "node": ">=7.5.0"
   },
@@ -56,6 +57,8 @@
     "mixin-loader": "^2.0.3",
     "webpack": "^4.19.0",
     "webpack-cli": "^3.1.0",
+    "webpack-merge": "^4.1.4",
     "webpack-dev-server": "^3.1.5"
-  }
+  },
+  "homepage": "https://jttan.com//projects/react-test/"
 }

@@ -2,7 +2,7 @@ import PopupBox from "../popupBox";
 const Portfolio=()=> (
     <div className="page-portfolio has-text-centered">
         <h2>Portfolio</h2>
-        <p>Pellentesque non lorem imperdiet nunc scelerisque volutpat. </p>
+        <p>Past private and commercial projects which I have worked on through the years.</p>
         <PopupBox/>
     </div>
 );

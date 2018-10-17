@@ -57,7 +57,7 @@ class App extends Component {
                 <footer className="footer block__relative text-white">
                     <div className="container">
                         <div className="has-text-centered">
-                            <h4>Joseph Tan portfolio site build with Webpack, React 1.6, React Router 4.3 and Axios.</h4>
+                            <h4>Joseph Tan portfolio site build with Webpack 4.16, React 1.6, React Router 4.3, axios.js, d3.js &amp; react-anime.js</h4>
                         </div>
                     </div>
                 </footer>

@@ -30,12 +30,16 @@ NAVIGATION BUTTON FLY IN ANIMATION
 
 @include keyframes(fly-in-btn-left){
   0% {
+    position: absolute;
+    left: -400%;
+  }
+  49%{
     position: relative;
-    transform: translateX(-400%);
+    left: -100%;
   }
   50% {
     position: relative;
-    transform: translateX(0);
+    left: 0%;
   }
   51%{
     transform: rotateX(0deg);
@@ -48,12 +52,16 @@ NAVIGATION BUTTON FLY IN ANIMATION
 
 @include keyframes(fly-in-btn-right){
   0% {
+    position: absolute;
+    right: -400%;
+  }
+  49%{
     position: relative;
-    transform: translateX(400%);
+    right: -100%;
   }
   50% {
     position: relative;
-    transform: translateX(0);
+    right: 0%;
   }
   51%{
     transform: rotateX(0deg);

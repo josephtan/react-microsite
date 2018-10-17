@@ -5,3 +5,9 @@
 .c-text-cyan{
   color: $cyan;
 }
+
+.white-link{
+  a{color:$white;
+    &:hover{color: $cyan}
+  }
+}

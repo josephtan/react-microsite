@@ -11,12 +11,14 @@ export default class DrawPolygon extends Component {
      this.hexWidth = 66;
      this.hexHeight = 66;
      this.hexRadius =  52;
+     this.clipPathId = "maskPath";
      this.maskSelector = ".masked-div";
      this.maskmarginTop = -12;
      this.maskmarginLeft = -14;
      this.maskhexWidth = 64;
      this.maskhexHeight = 64;
      this.maskhexRadius =  50;
+     this.maskclipPathId ="hexMask";
      this.cycleinterval = 2000;
      this.cycleinterval2 = 2000;
      this.cycleinterval3 = 2000;
@@ -25,8 +27,8 @@ export default class DrawPolygon extends Component {
         let classCyclerSelector = ReactDOM.findDOMNode(this.refs.logoList);
         let classCyclerSelector2 = ReactDOM.findDOMNode(this.refs.logoList2);
         let classCyclerSelector3 = ReactDOM.findDOMNode(this.refs.logoList3);
-        this.renderHex(this.polygonSelector, this.marginTop,this.marginLeft, this.hexRadius, this.hexWidth, this.hexHeight);
-        this.renderHexMask(this.maskSelector,this.maskmarginTop, this.maskmarginLeft, this.maskhexRadius, this.maskhexWidth, this.maskhexHeight);
+        this.renderHex(this.polygonSelector, this.marginTop,this.marginLeft, this.hexRadius, this.hexWidth, this.hexHeight,this.clipPathId);
+        this.renderHex(this.maskSelector,this.maskmarginTop, this.maskmarginLeft, this.maskhexRadius, this.maskhexWidth, this.maskhexHeight,this.maskclipPathId);
         this.classCycler(classCyclerSelector, this.cycleinterval);
         this.classCycler(classCyclerSelector2, this.cycleinterval2);
         this.classCycler(classCyclerSelector3, this.cycleinterval3);
@@ -47,7 +49,7 @@ export default class DrawPolygon extends Component {
             itemList[currentList].classList.add("motion");
         },Math.floor(Math.random() * 3000) + interval);
     }
-    renderHex(polygonClassName, marginTop, marginLeft, radius, hexWidth, hexHeight){
+    renderHex(polygonClassName, marginTop, marginLeft, radius, hexWidth, hexHeight,clipPathId){
         let margins = {top:marginTop, left:marginLeft};
         let _sq32 = (Math.sqrt(3) / 2), hexRad = radius, hexX = hexWidth , hexY = hexHeight;
         const drawHexagon =  d3.line()
@@ -65,31 +67,7 @@ export default class DrawPolygon extends Component {
              polygonSelector.attr("preserveAspectRatio","none");
              polygonSelector.append("defs")
             .append("clipPath")
-            .attr("id","maskPath")
-            .append("path")
-            .attr("class", "hex-path")
-            .attr("d", drawHexagon(hexagonData))
-            .attr("transform", "translate(" + [margins.left, margins.top] + ")");
-    }
-    renderHexMask(mask){
-        let margins = {top:this.maskmarginTop, left:this.maskmarginLeft};
-        let _sq32 = (Math.sqrt(3) / 2), hexRad = this.maskhexRadius, hexX = this.maskhexWidth , hexY = this.maskhexHeight;
-        const drawHexagon =  d3.line()
-            .x(function(d) { return d.x; })
-            .y(function(d) { return d.y; })
-            .curve(d3.curveCardinalClosed.tension(1));
-        const hexagonData = [
-            { "x": hexRad + hexX,"y": hexY},
-            { "x": hexRad / 2 + hexX,"y": hexRad * _sq32 + hexY},
-            { "x": -hexRad / 2 + hexX,"y": hexRad * _sq32 + hexY},
-            { "x": -hexRad + hexX,"y": hexY},
-            { "x": -hexRad / 2 + hexX,"y": -hexRad * _sq32 + hexY},
-            { "x": hexRad / 2 + hexX,"y": -hexRad * _sq32 + hexY}];
-        let maskSelector = d3.selectAll(mask).append("svg");
-        maskSelector.attr("preserveAspectRatio","none");
-        maskSelector.append("defs")
-            .append("clipPath")
-            .attr("id","hexMask")
+            .attr("id",clipPathId)
             .append("path")
             .attr("class", "hex-path")
             .attr("d", drawHexagon(hexagonData))

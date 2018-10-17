@@ -16,7 +16,6 @@ export default class Navigation extends Component{
         this.wrapperSelector =".wrapper";
         this.overlaySelector = ".menu-overlay";
         this.activeClass = "active";
-        this.openMenuSelector = "open-menu";
         this.menuBtnText=".menu-text";
         this.hexSelector=".hex-btn";
     }
@@ -43,7 +42,6 @@ export default class Navigation extends Component{
     toggleClasses(){
         const currentNav = this.state.showNav;
         if(currentNav === true){
-            document.querySelector(this.wrapperSelector).classList.add(this.openMenuSelector);
             document.querySelector(this.overlaySelector).classList.add(this.activeClass);
             document.querySelector(this.menuBtnText).classList.add(this.activeClass);
         } else{

@@ -66,20 +66,19 @@ nav{
    &.active{@include display-flex;
    }
   }
-  .dropdown-content-wrapper{min-width:150px; visibility: hidden;  margin: 10% auto;
+  .dropdown-content-wrapper{min-width:150px; margin: 10% auto; overflow: hidden;
     @include ctm-breakpoint(624px){
       margin: 12% auto;
     }
-    &.active{visibility: visible}
     .dropdown-content{@include display-flex; @include flex-direction(column); @extend .block__absolute;
       background: transparent; border-radius:0px; }
     a{ margin-bottom: $space; padding: $space-half; border:$border-blue-1; @extend .c-text-white; min-width: 150px;
       background: $cyan;
       &:nth-child(odd){
-        @include animation(0.8s linear fly-in-btn-left);
+        @include animation(1s linear fly-in-btn-left);
       }
       &:nth-child(even){
-        @include animation(0.8s linear fly-in-btn-right);
+        @include animation(1s linear fly-in-btn-right);
       }
       &:hover,&.active{background: $white; color: $cyan;
       }}

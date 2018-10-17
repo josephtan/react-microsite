@@ -48,6 +48,7 @@ $fa-li-width:         (30em / 14) !default;
 .font-fa-solid {font-family: "FontAwesomeSolid";}
 .font-fa,.font-fa-brands,.font-fa-solid{font-size:2.6em;}
 .fa-github{&::before{content: $fa-var-github;}}
+.fa-git{&::before{content: $fa-var-git;}}
 .fa-html5{&::before{content: $fa-var-html5;}}
 .fa-css3{&::before{content: $fa-var-css3;}}
 .fa-sass{&::before{content: $fa-var-sass;}}
@@ -62,3 +63,9 @@ $fa-li-width:         (30em / 14) !default;
 .fa-aws{&::before{content: $fa-var-aws;}}
 .fa-paypal{&::before{content: $fa-var-paypal;}}
 .fa-times{&::before{content:$fa-var-times;}}
+.fa-codepen{&::before{content:$fa-var-codepen;}}
+.fa-meetup{&::before{content:$fa-var-meetup;}}
+.fa-slack{&::before{content:$fa-var-slack;}}
+.fa-php{&::before{content:$fa-var-php;}}
+.fa-fiddle{&::before{content:$fa-var-fiddle;}}
+.fa-linkedin{&::before{content:$fa-var-linkedin;}}

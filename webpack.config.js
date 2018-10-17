@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const APP_PATH ="./src";
 const BUILD_PATH = "public";
-const PUBLIC_PATH = "./";
+const PUBLIC_PATH = "/public";
 module.exports = {
   mode: "development",
   context: __dirname,

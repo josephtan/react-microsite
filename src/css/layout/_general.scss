@@ -2,3 +2,4 @@ html,body{height: 100%}
 #app,.wrapper{@include display-flex; @include flex-direction(column);
   @extend .width-height-100;
 }
+.font-smaller{font-size: 0.8em}

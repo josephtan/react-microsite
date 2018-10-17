@@ -3,12 +3,11 @@ import { NavLink } from "react-router-dom";
 import {axiosInstance} from "./axiosOption";
 import * as d3 from "d3";
 import NavClock from "./navClock";
+import DrawPolygon from "./drawPolygon";
 
 // =========
 // NAV ITEMS
 // =========
-
-
 export default class Navigation extends Component{
     constructor(props){
         super(props);
@@ -18,6 +17,11 @@ export default class Navigation extends Component{
         this.activeClass = "active";
         this.menuBtnText=".menu-text";
         this.hexSelector=".hex-btn";
+        this.hexmarginTop=-22;
+        this.hexmarginLeft=-22;
+        this.hexRadius= 24;
+        this.hexWidth = 48;
+        this.hexHeight = 48;
     }
     componentDidMount(){
         axiosInstance.get("navdata.json")
@@ -28,7 +32,7 @@ export default class Navigation extends Component{
             }).catch((err)=>{
             console.log(err);
         });
-       this.renderHex();
+       this.renderHex(this.hexSelector,this.hexmarginTop,this.hexmarginLeft,this.hexRadius, this.hexWidth, this.hexHeight);
     }
     toggleShow (){
         const currentState = this.state.active;
@@ -50,9 +54,9 @@ export default class Navigation extends Component{
             document.querySelector(this.menuBtnText).classList.remove(this.activeClass);
         }
     }
-    renderHex(){
-        let margins = {top: -22, left: -22};
-        let _sq32 = (Math.sqrt(3) / 2), menuRad = 24, menX = 48, menY = 48;
+    renderHex(selector,marginTop,marginLeft,radius,hexWidth,hexHeight){
+        let margins = {top: marginTop, left: marginLeft};
+        let _sq32 = (Math.sqrt(3) / 2), menuRad = radius, menX = hexWidth, menY = hexHeight;
         const drawHexagon =  d3.line()
             .x(function(d) { return d.x; })
             .y(function(d) { return d.y; })
@@ -65,7 +69,7 @@ export default class Navigation extends Component{
             { "x": -menuRad / 2 + menX,  "y": -menuRad * _sq32 + menY},
             { "x": menuRad / 2 + menX, "y": -menuRad * _sq32 + menY}];
         let strokeW = 2, fill = "transparent";
-        let menuBtn = d3.select(this.hexSelector);
+        let menuBtn = d3.select(selector);
         let menuBtnElements = menuBtn.select("path")
             .attr("d", drawHexagon(hexagonData))
             .attr("transform", "translate(" + [margins.left, margins.top] + ")")

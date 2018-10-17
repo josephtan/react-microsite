@@ -25,8 +25,8 @@ export default class DrawPolygon extends Component {
         let classCyclerSelector = ReactDOM.findDOMNode(this.refs.logoList);
         let classCyclerSelector2 = ReactDOM.findDOMNode(this.refs.logoList2);
         let classCyclerSelector3 = ReactDOM.findDOMNode(this.refs.logoList3);
-        this.renderHex(this.polygonSelector);
-        this.renderHexMask(this.maskSelector);
+        this.renderHex(this.polygonSelector, this.marginTop,this.marginLeft, this.hexRadius, this.hexWidth, this.hexHeight);
+        this.renderHexMask(this.maskSelector,this.maskmarginTop, this.maskmarginLeft, this.maskhexRadius, this.maskhexWidth, this.maskhexHeight);
         this.classCycler(classCyclerSelector, this.cycleinterval);
         this.classCycler(classCyclerSelector2, this.cycleinterval2);
         this.classCycler(classCyclerSelector3, this.cycleinterval3);
@@ -47,9 +47,9 @@ export default class DrawPolygon extends Component {
             itemList[currentList].classList.add("motion");
         },Math.floor(Math.random() * 3000) + interval);
     }
-    renderHex(polygon){
-        let margins = {top:this.marginTop, left:this.marginLeft};
-        let _sq32 = (Math.sqrt(3) / 2), hexRad = this.hexRadius, hexX = this.hexWidth , hexY = this.hexHeight;
+    renderHex(polygonClassName, marginTop, marginLeft, radius, hexWidth, hexHeight){
+        let margins = {top:marginTop, left:marginLeft};
+        let _sq32 = (Math.sqrt(3) / 2), hexRad = radius, hexX = hexWidth , hexY = hexHeight;
         const drawHexagon =  d3.line()
             .x(function(d) { return d.x; })
             .y(function(d) { return d.y; })
@@ -61,7 +61,7 @@ export default class DrawPolygon extends Component {
             { "x": -hexRad + hexX,"y": hexY},
             { "x": -hexRad / 2 + hexX,"y": -hexRad * _sq32 + hexY},
             { "x": hexRad / 2 + hexX,"y": -hexRad * _sq32 + hexY}];
-        let polygonSelector = d3.selectAll(polygon).append("svg");
+        let polygonSelector = d3.selectAll(polygonClassName).append("svg");
              polygonSelector.attr("preserveAspectRatio","none");
              polygonSelector.append("defs")
             .append("clipPath")

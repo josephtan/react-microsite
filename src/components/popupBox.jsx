@@ -49,12 +49,12 @@ export default class PopupBox extends Component{
     render(){
         const itemList = this.state.portfoliodata.map((items,i) => {
             return(<li key={i}>
-                <a href="#" key={i} onClick={this.clickHandle.bind(this,items)} onMouseOver={this.mouseOver.bind(this,items)} onMouseOut={this.mouseOut.bind(this,items)}>
+                <a key={i} onClick={this.clickHandle.bind(this,items)} onMouseOver={this.mouseOver.bind(this,items)} onMouseOut={this.mouseOut.bind(this,items)}>
                     <img className="thumbnail" src={require("../images/".concat(items.thumb))} alt={items.text} />
                     <div className={this.state.thisMouseOver === true && this.state.currentPopUp === items.index ? "popup-tooltip slideup":"popup-tooltip"}><span className="has-text-centered">{items.text}</span></div>
                 </a>
                 <div className={this.state.active === true && this.state.currentPopUp === items.index  ? "popup active" : "popup"}>
-                    <div className="popup-content">
+                    <div className="popup-content centered-breakpoints">
                         <button onClick={this.clickHandle.bind(this,items)}>
                             <span className="font-fa-solid fa-times is-borderless"></span>
                         </button>

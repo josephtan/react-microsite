@@ -20,9 +20,12 @@ module.exports = {
                 uglifyOptions: {
                     compress: false,
                     ecma: 5,
-                    mangle: true
+                    mangle: true,
+                    output: {
+                        "ascii_only": true
+                    }
                 },
-                sourceMap: true
+                sourceMap: true,
             })
         ]
     },

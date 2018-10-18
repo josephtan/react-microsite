@@ -102,3 +102,24 @@
     }
   }
 }
+
+
+.centered-breakpoints{
+  @include xlg-breakpoint(){
+    top:10%;
+    max-width: $bp-large;
+    margin: 0 auto;
+  }
+  @include lrg-breakpoint(){
+    top:30%;
+    max-width: $bp-med;
+  }
+
+  @include med-breakpoint(){
+    max-width: $bp-small-2;
+  }
+  @include ctm-breakpoint(480px){
+    top:30%;
+    max-width: $bp-micro;
+  }
+}

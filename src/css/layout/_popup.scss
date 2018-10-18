@@ -11,7 +11,11 @@
           &.active{display: block; @include animation(popup-fadein 0.5s linear);
             .popup-content{
               @extend .block__relative; padding: $space-double * 2; border:1px solid $cyan; background: $black;
-              img{margin: 0 auto;}
+              img{margin: 0 auto; max-width: 760px;
+                @include xlg-breakpoint(){
+                  max-width:100%;
+                }
+              }
             }
             button{position: absolute; top:2%; right:2%; background:none; border:0; color:$cyan; &:hover{cursor: pointer}}}}
       }}}

@@ -87,10 +87,11 @@ nav{
 
 
 .menu-overlay{
-  position: absolute;
-  width: 100%;
+  position: fixed;
+  height:100vh;
+  width:100vw;
   display: none;
-  height: 100%;
+  box-sizing: border-box;
   background: rgba(0,0,0,0.8);
   z-index: 4;
   overflow: hidden;

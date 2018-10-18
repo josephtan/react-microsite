@@ -57,7 +57,7 @@ class App extends Component {
                 </main>
                 <footer className="footer block__relative text-white">
                     <div className="has-text-centered">
-                        <p>Web activities and external links:</p>
+                        <p>Web activities and external links that I can be contacted:</p>
                         <ul className="no-liststyle list-inline white-link font-smaller">
                             <li><a href="https://github.com/josephtan" target="_blank"><span className="font-fa-brands fa-github"></span></a></li>
                             <li><a href="https://codepen.io/josephtan/"  target="_blank"><span className="font-fa-brands fa-codepen"></span></a></li>

@@ -9,7 +9,7 @@ package.json contents:
 
 
 
-### running the build
+### Running the build
 ---
 Assuming that your local dev environment has node.js / nvm, webpack and yarn installed please proceed through the steps below:
 1. Clone/ Download the project folder into your local environment

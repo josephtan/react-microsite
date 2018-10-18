@@ -53,8 +53,20 @@ class App extends Component {
                 </header>
                 <main role="main" className="main-container container">
                     {RouteTags}
+
                 </main>
                 <footer className="footer block__relative text-white">
+                    <div className="has-text-centered">
+                        <p>Web activities and external links:</p>
+                        <ul className="no-liststyle list-inline white-link font-smaller">
+                            <li><a href="https://github.com/josephtan" target="_blank"><span className="font-fa-brands fa-github"></span></a></li>
+                            <li><a href="https://codepen.io/josephtan/"  target="_blank"><span className="font-fa-brands fa-codepen"></span></a></li>
+                            <li><a href="https://www.meetup.com/" target="_blank"><span className="font-fa-brands fa-meetup"></span></a></li>
+                            <li><a href="https://www.slack.com/" target="_blank"><span className="font-fa-brands fa-slack"></span></a></li>
+                            <li><a href="https://jsfiddle.net/user/JosephTan/fiddles/" target="_blank"><span className="font-fa-brands fa-fiddle"></span></a></li>
+                            <li><a href="https://www.linkedin.com/in/joetan83/" target="_blank"><span className="font-fa-brands fa-linkedin"></span></a></li>
+                        </ul>
+                    </div>
                     <div className="container">
                         <div className="has-text-centered">
                             <h4>Joseph Tan portfolio site build with Webpack 4.16, React 1.6, React Router 4.3, axios.js, d3.js &amp; react-anime.js</h4>

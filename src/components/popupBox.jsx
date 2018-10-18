@@ -58,7 +58,7 @@ export default class PopupBox extends Component{
                         <button onClick={this.clickHandle.bind(this,items)}>
                             <span className="font-fa-solid fa-times is-borderless"></span>
                         </button>
-                        <img src={require("../images/".concat(items.image))} alt={items.text} width="800" height="600" />
+                        <img src={require("../images/".concat(items.image))} alt={items.text} />
                         <p>{items.description}</p>
                     </div>
                 </div>

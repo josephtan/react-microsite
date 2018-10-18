@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import {axiosInstance} from "../axiosOption";
-import {drawPolygon} from "./drawPolygon";
 
 export default class PopupBox extends Component{
     constructor(props){
@@ -60,6 +59,7 @@ export default class PopupBox extends Component{
                         </button>
                         <img src={require("../images/".concat(items.image))} alt={items.text} />
                         <p>{items.description}</p>
+                        <a className="btn btn-projectlink margin-centered" href={items.url} target="_blank">Project Link</a>
                     </div>
                 </div>
             </li>);

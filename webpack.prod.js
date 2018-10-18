@@ -22,6 +22,7 @@ module.exports = {
                     ecma: 5,
                     mangle: true,
                     output: {
+                        // https://github.com/mishoo/UglifyJS2/issues/490
                         "ascii_only": true
                     }
                 },

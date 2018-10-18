@@ -3,3 +3,18 @@ html,body{height: 100%; margin:0;}
   @extend .width-height-100;
 }
 .font-smaller{font-size: 0.8em}
+
+.page-home{
+  p.description{word-break: break-all}
+}
+
+.btn{
+  max-width: 150px;
+  background: $cyan;
+  padding: $space;
+  color: $white;
+  &:hover{
+    @extend .c-text-cyan;
+    background: $white;
+  }
+}

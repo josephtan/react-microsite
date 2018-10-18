@@ -82,7 +82,7 @@ module.exports = {
       new HtmlWebpackPlugin({
           title: "react-microsite",
           filename: "index.html",
-          template:"index.html"
+          template: "template.html"
       })
   ],
   devServer: {

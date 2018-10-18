@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {axiosInstance} from "./axiosOption";
+import {axiosInstance} from "../axiosOption";
 import {drawPolygon} from "./drawPolygon";
 
 export default class PopupBox extends Component{

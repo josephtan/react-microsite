@@ -6,7 +6,7 @@ import Contact from "./views/contact";
 import Profile from "./views/profile";
 import Blog from "./views/blog";
 import Portfolio from "./views/portfolio";
-import {axiosInstance} from "./axiosOption";
+import {axiosInstance} from "../axiosOption";
 
 class App extends Component {
 

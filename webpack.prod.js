@@ -9,7 +9,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const APP_PATH ="./src";
 const BUILD_PATH = "prod";
-const PUBLIC_PATH = "/projects/react-test/";
+const PUBLIC_PATH = "";
 module.exports = {
     optimization: {
         minimizer: [

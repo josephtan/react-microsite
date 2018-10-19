@@ -1,7 +1,5 @@
 [
   {"index":"1", "type": "link", "text": "Home", "url": "/", "exact":true},
   {"index":"2", "type": "link", "text": "Profile", "url": "/profile","exact":false},
-  {"index":"3", "type": "link", "text": "Portfolio", "url": "/portfolio","exact":false},
-  {"index":"5", "type": "link", "text": "Blog", "url": "/blog","exact":false},
-  {"index":"6", "type": "link", "text": "Contact", "url": "/contact","exact":false}
+  {"index":"3", "type": "link", "text": "Portfolio", "url": "/portfolio","exact":false}
 ]

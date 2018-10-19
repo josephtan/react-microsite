@@ -1,16 +1,13 @@
 [
-  {"index":1, "text": "Image 1", "image": "image-1.jpg","thumb":"thumb-1.jpg","description":"Nulla enim lorem, iaculis sit amet vestibulum sed, feugiat vel libero. Maecenas pellentesque eu arcu eu faucibus."},
-  {"index":2, "text": "Image 2", "image": "image-2.jpg","thumb":"thumb-2.jpg","description":"Cras tincidunt, magna in imperdiet mollis, purus libero placerat elit, eget interdum lectus sapien ut nulla. Sed interdum ut tortor vel eleifend."},
-  {"index":3, "text": "Image 3", "image": "image-3.jpg","thumb":"thumb-3.jpg","description":"Aenean tempor augue vitae tempus tempus. Aenean maximus purus ut augue viverra, at egestas sem convallis."},
-  {"index":4, "text": "Image 4", "image": "image-4.jpg","thumb":"thumb-4.jpg","description":"Sed tempor, erat quis molestie tincidunt, dolor tellus vestibulum metus, at maximus leo libero eu elit. Sed ultrices turpis ut luctus ullamcorper."},
-  {"index":5, "text": "Image 5", "image": "image-5.jpg","thumb":"thumb-5.jpg","description":"Curabitur metus libero, consequat et vulputate non, dictum ut mi."},
-  {"index":6, "text": "Image 6", "image": "image-6.jpg","thumb":"thumb-6.jpg","description":"Nulla enim lorem, iaculis sit amet vestibulum sed, feugiat vel libero. Maecenas pellentesque eu arcu eu faucibus."},
-  {"index":7, "text": "Sleep Disorders Australia", "image": "image-sleepoz.jpg","thumb":"thumb-sleepoz.jpg",
+  {"index":1, "text": "Chubb Travel Australia", "image": "image-chubb.jpg","thumb":"thumb-chubb.jpg",
+    "description":"A complex form  which I have worked on using webpack, yarn, gulp, ES6 and Jquery build.",
+    "url":"https://www.chubbtravelinsurance.com.au/"},
+  {"index":2, "text": "Sleep Disorders Australia", "image": "image-sleepoz.jpg","thumb":"thumb-sleepoz.jpg",
     "description":"A medium sized website which I have done a custom design on Photoshop, responsive template build on atomic design framework with gulp.js, angular.js 1.5x and integrate the front-end build to concrete v5.7 CMS. Build a donation, membership and renewal modules with validation error checking which submits data to PayPal's PDT system using URI parameters.",
     "url":"https://sleepoz.org.au/"},
-  {"index":8, "text": "Mordern Group", "image": "image-moderngroup.jpg","thumb":"thumb-moderngroup.jpg","description":"Modern Group website complete responsive build and concrete 5.7 CMS integration while working with MultimediaX. Front-end build done with atomic design framework on grunt.js","url":"http://moderngroup.com.au"},
-  {"index":9, "text": "Toyota Warren", "image": "image-toyotawarren.jpg","thumb":"thumb-toyotawarren.jpg","description":"Old responsive template project for Toyota Warren while contracting with Oakton Consulting - Sydney. Same build concept as Tourism Australia with atomic design",
+  {"index":3, "text": "Mordern Group", "image": "image-moderngroup.jpg","thumb":"thumb-moderngroup.jpg","description":"Modern Group website complete responsive build and concrete 5.7 CMS integration while working with MultimediaX. Front-end build done with atomic design framework on grunt.js","url":"http://moderngroup.com.au"},
+  {"index":4, "text": "Toyota Warren", "image": "image-toyotawarren.jpg","thumb":"thumb-toyotawarren.jpg","description":"Old responsive template project for Toyota Warren while contracting with Oakton Consulting - Sydney. Same build concept as Tourism Australia with atomic design",
     "url":"http://jttan.com/portfolio/Toyota_Warren/#home"},
-  {"index":10, "text": "Tourism Australia", "image": "image-tourismaus.jpg","thumb":"thumb-tourismaus.jpg",
+  {"index":5, "text": "Tourism Australia", "image": "image-tourismaus.jpg","thumb":"thumb-tourismaus.jpg",
     "description":"Large team templating project of old when working in D.T Digital now AKQA. This large template built on atomic design and scss modules with grunt.js as the task compiler.","url":"http://jttan.com/portfolio/TourismAustralia/"}
 ]

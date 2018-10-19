@@ -42,11 +42,9 @@
     "webpack-hot-middleware": "^2.22.3",
     "webpack-html-plugin": "^0.1.1",
     "react-transition-group": "^2.4.0",
-    "p5": "^0.7.1",
     "d3": "^5.7.0",
     "animejs": "^2.2.0",
-    "react-anime": "^2.1.0",
-    "react-p5-wrapper": "^0.0.4"
+    "react-anime": "^2.1.0"
   },
   "devDependencies": {
     "babel-preset-env": "^1.6.1",

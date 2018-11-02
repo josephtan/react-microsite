@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import {axiosInstance} from "../axiosOption";
 import * as d3 from "d3";
 import NavClock from "./navClock";
-import DrawPolygon from "./drawPolygon";
 
 // =========
 // NAV ITEMS

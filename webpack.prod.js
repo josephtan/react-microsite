@@ -110,5 +110,6 @@ module.exports = {
     devServer: {
         inline: false,
         historyApiFallback: true,
+        hot: true
     }
 };

@@ -43,7 +43,6 @@
     "webpack-html-plugin": "^0.1.1",
     "react-transition-group": "^2.4.0",
     "d3": "^5.7.0",
-    "animejs": "^2.2.0",
     "react-anime": "^2.1.0"
   },
   "devDependencies": {

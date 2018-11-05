@@ -71,7 +71,7 @@ export default class PopupBox extends Component{
     render(){
         return(
             <div className="portfolio-thumbnails">
-                <ul className="no-liststyle">
+                <ul className="no-liststyle has-text-left">
                     {this.popUpList()}
                 </ul>
             </div>

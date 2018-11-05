@@ -16,7 +16,7 @@
   }
 
 }
-.column{margin: 0}
+.column{margin: 0; padding: $space-half 0;}
 
 .page-home,.page-profile,.page-portfolio,.page-blog,.page-contact{
   display: block;

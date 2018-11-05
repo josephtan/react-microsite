@@ -1,5 +1,6 @@
 [
   {"index":"1", "type": "link", "text": "Home", "url": "/", "exact":true, "strict":true},
   {"index":"2", "type": "link", "text": "Profile", "url": "/profile","exact":false,  "strict":true},
-  {"index":"3", "type": "link", "text": "Portfolio", "url": "/portfolio","exact":false,  "strict":true}
+  {"index":"3", "type": "link", "text": "Portfolio", "url": "/portfolio","exact":false,  "strict":true},
+  {"index":"4", "type": "", "text": "Error", "url": "", "exact":false,  "strict":false}
 ]

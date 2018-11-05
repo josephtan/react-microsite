@@ -11,7 +11,7 @@ nav{
   a{text-decoration: none;}
   .holder-btn{
     left: 50%;
-    margin-left: -30px;
+    margin-left: -18px;
   }
 
   .menu-text{position: relative; font-size: 1.2em; top: 40px; left: -50px;
@@ -69,8 +69,8 @@ nav{
    }
   }
   .dropdown-content-wrapper{min-width:150px; margin: 10% auto; overflow: hidden;
-    @include ctm-breakpoint(624px){
-      margin: 12% auto;
+    @include ctm-breakpoint(1088px){
+      margin: 30% auto;
     }
     .dropdown-content{@include display-flex; @include flex-direction(column); @extend .block__absolute;
       background: transparent; border-radius:0px; }

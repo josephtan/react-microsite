@@ -31,7 +31,7 @@ module.exports = {
         ]
     },
     mode: "production",
-    entry: APP_PATH + "/index.jsx",
+    entry: APP_PATH + "/index.js",
     output: {
         path: path.resolve(BUILD_PATH),
         filename: "bundle.js",

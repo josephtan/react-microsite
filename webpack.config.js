@@ -9,7 +9,7 @@ const PUBLIC_PATH = "/public";
 module.exports = {
   mode: "development",
   context: __dirname,
-  entry: APP_PATH + "/index.jsx",
+  entry: APP_PATH + "/index.js",
   output: {
     path: path.resolve(BUILD_PATH),
     filename: "bundle.js",
@@ -31,7 +31,7 @@ module.exports = {
               use: ExtractTextPlugin.extract({
                   fallback: "style-loader",
                   use: [
-                      { loader: "css-loader", options: { minimize: true } }
+                      { loader: "css-loader", options: { minimize: true} }
                   ]
               })
           },

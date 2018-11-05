@@ -35,13 +35,13 @@ class App extends Component {
     };
 
     const RouteTags = this.state.routedata.map((routelink) => {
-            return(<Route exact={routelink.exact} key={routelink.index} path={routelink.url} component={componentRegistry[routelink.text]} />)
+            return(<Route exact={routelink.exact} key={routelink.index} path={routelink.url} component={componentRegistry[routelink.text]} strict={routelink.strict} />)
      });
 
     return(
             <div className="wrapper">
                 <div className="menu-overlay"></div>
-                <header className="header block__relative">
+                <header className="container header block__relative">
                     <div>
                         <div id="block__nav">
                            <Navigation />
@@ -56,7 +56,7 @@ class App extends Component {
 
                 </main>
                 <footer className="footer block__relative text-white">
-                    <div className="has-text-centered">
+                    <div className="container has-text-centered">
                         <p>Web activities and external links that I can be contacted:</p>
                         <ul className="no-liststyle list-inline white-link font-smaller external-links">
                             <li><a href="https://github.com/josephtan" rel="noreferrer" target="_blank"><span className="font-fa-brands fa-github"></span><span className="link-text">Github</span></a></li>

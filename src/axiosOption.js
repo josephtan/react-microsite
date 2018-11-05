@@ -1,7 +1,7 @@
 /**
  * Created by Joseph Tan on 30/07/2018.
  */
-let basePath ="/projects/react-test/";
+let basePath ="/public";
 let axios = require("axios");
 
 

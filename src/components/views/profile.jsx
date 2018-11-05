@@ -1,5 +1,3 @@
-import AnimateText from "../animateText";
-import Anime from "react-anime";
 import React from "react";
 
 const Profile=()=> (

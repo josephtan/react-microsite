@@ -4,22 +4,21 @@
 .footer {
 	line-height: 1.2;
 	font-size: 0.8rem;
-	width: 100%;
 	padding: $space;
 	margin-top: 2%;
+	.container{max-width: 1280px; margin: 0 auto}
 	@include background-image(linear-gradient($cyan, $blue-dark));
 	a {
 		color: $gray-light;
 	}
 
-
-	h4{ @extend .is-inline; width: auto; text-align: center; font-size: 1.0em; font-weight: normal;}
+	h4{ @extend .block_inline; width: auto; text-align: center; font-size: 1.0em; font-weight: normal;}
 	padding-bottom: 1em;
 	@include ctm-breakpoint(1245px){
 		max-height: 100%;
 	}
 	.external-links{
 		span.link-text{font-size: 0; visibility: hidden}
-
+	a{text-decoration: none;}
 	}
 }

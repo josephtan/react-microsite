@@ -1,7 +1,5 @@
 header {
-	margin-top:$space;
-
-	h1{font-size: 4em;}
+	.header-title{font-size: 4em; padding: 0; margin-top: $space;}
 	.menu-text{color: $white}
 	.nav-clock{position: relative; top:25px; left:-25px; border: 1px dashed $cyan; color: $white}
 }

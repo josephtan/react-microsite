@@ -1,11 +1,12 @@
-html,body{height: 100%; margin:0;}
-#app,.wrapper{@include display-flex; @include flex-direction(column);
+html,body{height: 100%; margin:0; font-family: "Lato Light"}
+#app{@include display-flex; @include flex-direction(column);}
+.wrapper{@include display-flex; @include flex-direction(column);
   @extend .width-height-100;
 }
 .font-smaller{font-size: 0.8em}
 
 .page-home{
-  p.description{word-break: break-all}
+  p.description{word-break: break-all; span{display: inline-block}}
 }
 
 .btn{

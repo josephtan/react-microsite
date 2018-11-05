@@ -4,9 +4,11 @@ $NAVIGATION
 
 #block__nav{
   @include display-flex;
-  min-height:105px;
+  margin-top:$space;
+  min-height:10vh;
 }
 nav{
+  a{text-decoration: none;}
   .holder-btn{
     left: 50%;
     margin-left: -30px;

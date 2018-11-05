@@ -5,7 +5,9 @@
 @import "compass/css3/animation";
 @import "compass/css3/transition";
 @import "compass/css3/font-face";
-@import "~bulma/bulma";
+@import "~bulma/sass/utilities/all";
+@import "~bulma/sass/grid/columns";
+@import "~bulma/sass/elements/container";
 @import "variables";
 @import "vendor/fontAwesome/faVariables";
 @import "settings/color";

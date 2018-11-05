@@ -48,7 +48,7 @@ export default class PopupBox extends Component{
 
     popUpList() {
         const itemList = this.state.portfoliodata.map((items,i) => {
-            return(<li key={i}>
+            return(<li key={i} className="has-text-centered">
                 <a key={i} onClick={this.clickHandle.bind(this,items)} onMouseOver={this.mouseOver.bind(this,items)} onMouseOut={this.mouseOut.bind(this,items)}>
                     <img className="thumbnail" src={require("../images/".concat(items.thumb))} alt={items.text} />
                     <div className={this.state.thisMouseOver === true && this.state.currentPopUp === items.index ? "popup-tooltip slideup":"popup-tooltip"}><span className="has-text-centered">{items.text}</span></div>

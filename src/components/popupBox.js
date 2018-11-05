@@ -45,7 +45,8 @@ export default class PopupBox extends Component{
         const currentPopUp = items.index;
         this.setState({thisMouseOver:false,currentPopUp:currentPopUp});
     }
-    render(){
+
+    popUpList() {
         const itemList = this.state.portfoliodata.map((items,i) => {
             return(<li key={i}>
                 <a key={i} onClick={this.clickHandle.bind(this,items)} onMouseOver={this.mouseOver.bind(this,items)} onMouseOut={this.mouseOut.bind(this,items)}>
@@ -64,10 +65,14 @@ export default class PopupBox extends Component{
                 </div>
             </li>);
         });
+        return itemList;
+    };
+
+    render(){
         return(
             <div className="portfolio-thumbnails">
                 <ul className="no-liststyle">
-                    {itemList}
+                    {this.popUpList()}
                 </ul>
             </div>
         )

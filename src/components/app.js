@@ -1,12 +1,14 @@
 import React, { Component } from "react";
-import {Route} from "react-router-dom";
+import {Route,Switch} from "react-router-dom";
 import Navigation from "./navigation";
 import Home from "./views/home";
 import Contact from "./views/contact";
 import Profile from "./views/profile";
 import Blog from "./views/blog";
 import Portfolio from "./views/portfolio";
+import Error from "./views/error";
 import {axiosInstance} from "../axiosOption";
+
 
 class App extends Component {
 
@@ -31,11 +33,18 @@ class App extends Component {
             "Contact" :Contact,
             "Profile" :Profile,
             "Blog" : Blog,
-            "Portfolio": Portfolio
+            "Portfolio": Portfolio,
+            "Error":Error
     };
 
     const RouteTags = this.state.routedata.map((routelink) => {
-            return(<Route exact={routelink.exact} key={routelink.index} path={routelink.url} component={componentRegistry[routelink.text]} strict={routelink.strict} />)
+        let Routes = [];
+        if(routelink.type !== ""){
+            Routes = <Route exact={routelink.exact} key={routelink.index} path={routelink.url} component={componentRegistry[routelink.text]} strict={routelink.strict} />;
+                }else{
+            Routes = <Route component={componentRegistry[routelink.text]}  />
+                }
+        return Routes;
      });
 
     return(
@@ -52,8 +61,9 @@ class App extends Component {
                     </div>
                 </header>
                 <main role="main" className="main-container container">
+                    <Switch>
                     {RouteTags}
-
+                    </Switch>
                 </main>
                 <footer className="footer block__relative text-white">
                     <div className="container has-text-centered">

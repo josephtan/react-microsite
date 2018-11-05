@@ -4,6 +4,8 @@ html,body{height: 100%; margin:0; font-family: "Lato Light"}
   @extend .width-height-100;
 }
 .font-smaller{font-size: 0.8em}
+.font-larger {font-size: 1.4em;}
+.no-underline{text-decoration: none}
 
 .page-home{
   p.description{word-break: break-all; span{display: inline-block}}

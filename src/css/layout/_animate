@@ -81,7 +81,7 @@ NAVIGATION BUTTON FLY IN ANIMATION
 LOGO SLOT ANIMATION PROPERTIES
 \*------------------------------------*/
 
-@include keyframes (cycle) {
+@keyframes cycle {
   0%  { top:80%;}
   4%  { top:20%;}
   16% { top:20%; z-index:0; }
@@ -97,12 +97,12 @@ LOGO SLOT ANIMATION PROPERTIES
 TOOLTIP FLOAT UP
 \*------------------------------------*/
 
-@include keyframes(tooltip-slideup){
+@keyframes tooltip-slideup{
   0%{bottom:-55%;}
   50%{bottom:-15%}
   100%{bottom:0;}
 }
-@include keyframes(tooltip-slidedown){
+@keyframes tooltip-slidedown{
   0%{bottom:0%;}
   50%{bottom:-15%}
   100%{bottom:-20%}
@@ -112,7 +112,7 @@ TOOLTIP FLOAT UP
 POPUP FADE-IN
 \*------------------------------------*/
 
-@include keyframes(popup-fadein){
+@keyframes popup-fadein{
   0%{opacity:0;}
   50%{opacity: 0.5;}
   100%{opacity: 1}

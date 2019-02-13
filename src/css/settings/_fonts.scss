@@ -15,29 +15,29 @@ $fa-li-width:         (30em / 14) !default;
 \*------------------------------------*/
 @font-face {
   font-family: "FontAwesome";
-  src: url("../fonts/fa-regular-400.eot?") format("eot"),
-  url("../fonts/fa-regular-400.woff2") format("woff2"),
-  url("../fonts/fa-regular-400.woff") format("woff"),
-  url("../fonts/fa-regular-400.ttf") format("truetype"),
-  url("../fonts/fa-regular-400.svg#FontAwesome") format("svg");
+  src: url($fa-font-path + "/fa-regular-400.eot?") format("eot"),
+  url($fa-font-path + "/fa-regular-400.woff2") format("woff2"),
+  url($fa-font-path + "/fa-regular-400.woff") format("woff"),
+  url($fa-font-path + "/fa-regular-400.ttf") format("truetype"),
+  url($fa-font-path + "/fa-regular-400.svg#FontAwesome") format("svg");
 }
 
 @font-face {
   font-family: "FontAwesomeBrands";
-  src: url("../fonts/fa-brands-400.eot?") format("eot"),
-  url("../fonts/fa-brands-400.woff2") format("woff2"),
-  url("../fonts/fa-brands-400.woff") format("woff"),
-  url("../fonts/fa-brands-400.ttf") format("truetype"),
-  url("../fonts/fa-brands-400.svg#FontAwesome") format("svg");
+  src: url($fa-font-path + "/fa-brands-400.eot?") format("eot"),
+  url($fa-font-path + "/fa-brands-400.woff2") format("woff2"),
+  url($fa-font-path + "/fa-brands-400.woff") format("woff"),
+  url($fa-font-path + "/fa-brands-400.ttf") format("truetype"),
+  url($fa-font-path + "/fa-brands-400.svg#FontAwesome") format("svg");
 }
 
 @font-face {
   font-family: "FontAwesomeSolid";
-  src: url("../fonts/fa-solid-900.eot?") format("eot"),
-  url("../fonts/fa-solid-900.woff2") format("woff2"),
-  url("../fonts/fa-solid-900.woff") format("woff"),
-  url("../fonts/fa-solid-900.ttf") format("truetype"),
-  url("../fonts/fa-solid-900.svg#FontAwesome") format("svg");
+  src: url($fa-font-path + "/fa-solid-900.eot?") format("eot"),
+  url($fa-font-path + "/fa-solid-900.woff2") format("woff2"),
+  url($fa-font-path + "/fa-solid-900.woff") format("woff"),
+  url($fa-font-path + "/fa-solid-900.ttf") format("truetype"),
+  url($fa-font-path + "/fa-solid-900.svg#FontAwesome") format("svg");
 }
 
 /*------------------------------------*\

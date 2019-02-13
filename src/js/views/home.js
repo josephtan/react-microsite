@@ -1,5 +1,6 @@
-import AnimateText from "../animateText";
-import DrawPolygon from "../drawPolygon";
+import React from "react";
+import AnimateText from "../components/animateText";
+import DrawPolygon from "../components/drawPolygon";
 
 
 const Home=()=> (

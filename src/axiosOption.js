@@ -1,7 +1,7 @@
 /**
  * Created by Joseph Tan on 30/07/2018.
  */
-let basePath = "";
+let basePath = ".";
 let axios = require("axios");
 
 
@@ -10,6 +10,5 @@ let axiosInstance = axios.create({
 });
 
 module.exports = {
-    axiosInstance: axiosInstance,
-    basePath: basePath
+    axiosInstance: axiosInstance
 };

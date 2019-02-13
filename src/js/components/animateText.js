@@ -1,7 +1,5 @@
 import React, {Component} from "react";
 import Anime from "react-anime";
-import {anime} from "animejs";
-
 
 export default class animateText extends Component{
     constructor(props){

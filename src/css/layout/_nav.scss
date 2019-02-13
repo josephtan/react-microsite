@@ -31,7 +31,7 @@ nav{
       max-width: $hex-btn-wh;
       min-height: $hex-btn-wh;
       @include rotate(90deg);
-      @include animation(0.5s linear spin-hex-c-clockwise);
+      @include animation( spin-hex-c-clockwise, 0.5s, linear);
       path{stroke: $cyan}
     }
 
@@ -53,7 +53,7 @@ nav{
     }
   }
   &.is-active{
-    svg{path{stroke: $cyan;} @include transition(all, 0.5s, ease-in-out); @include animation(0.5s linear spin-hex-clockwise); @include rotate(0deg);}
+    svg{path{stroke: $cyan;} @include transition(all, 0.5s, ease-in-out); @include animation(spin-hex-clockwise,0.5s, linear ); @include rotate(0deg);}
     .fa-bars{ @extend .c-text-white; @include rotate(-90deg);}
     .text{@extend .c-text-cyan;}
   }
@@ -77,10 +77,10 @@ nav{
     a{ margin-bottom: $space; padding: $space-half; border:$border-blue-1; @extend .c-text-white; min-width: 150px;
       background: $cyan;
       &:nth-child(odd){
-        @include animation(1s linear fly-in-btn-left);
+        @include animation(fly-in-btn-left,1s,linear);
       }
       &:nth-child(even){
-        @include animation(1s linear fly-in-btn-right);
+        @include animation(fly-in-btn-right,1s,linear);
       }
       &:hover,&.active{background: $white; color: $cyan;
       }}

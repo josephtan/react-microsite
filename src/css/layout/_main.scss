@@ -60,8 +60,8 @@
   }
   .masked-div{@extend .block__absolute; top:2px; left:2px; background: $gray-dark; -webkit-clip-path:url("#hexMask"); clip-path: url("#hexMask");
     ul{@extend .block__relative; margin: 0; padding: 0;  width: $hex-home-wh; height: $hex-home-wh; overflow: hidden;
-      li{ @extend .block__absolute;  width: $hex-home-wh; height: $hex-home-wh;top:-80%; padding:$space-half 0;
-        &.motion{ @include animation(cycle 6s ease-in-out infinite)}
+      li{ @extend .block__absolute;  width: $hex-home-wh; height: $hex-home-wh; top:-80%; padding:$space-half 0; background: $white;
+        &.motion{ @include animation(cycle, 6s, ease-in-out, infinite)}
       }
     }
     span{display: block; color: $white; text-align: center; }

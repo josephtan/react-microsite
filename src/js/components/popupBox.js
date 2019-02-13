@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {axiosInstance} from "../axiosOption";
+import {axiosInstance} from "../../axiosOption";
 
 export default class PopupBox extends Component{
     constructor(props){
@@ -50,7 +50,7 @@ export default class PopupBox extends Component{
         const itemList = this.state.portfoliodata.map((items,i) => {
             return(<li key={i} className="has-text-centered">
                 <a key={i} onClick={this.clickHandle.bind(this,items)} onMouseOver={this.mouseOver.bind(this,items)} onMouseOut={this.mouseOut.bind(this,items)}>
-                    <img className="thumbnail" src={require("../images/".concat(items.thumb))} alt={items.text} />
+                    <img className="thumbnail" src={require("../../images/".concat(items.thumb))} alt={items.text} />
                     <div className={this.state.thisMouseOver === true && this.state.currentPopUp === items.index ? "popup-tooltip slideup":"popup-tooltip"}><span className="has-text-centered">{items.text}</span></div>
                 </a>
                 <div className={this.state.active === true && this.state.currentPopUp === items.index  ? "popup active" : "popup"}>
@@ -58,7 +58,7 @@ export default class PopupBox extends Component{
                         <button onClick={this.clickHandle.bind(this,items)}>
                             <span className="font-fa-solid fa-times is-borderless"></span>
                         </button>
-                        <img src={require("../images/".concat(items.image))} alt={items.text} />
+                        <img src={require("../../images/".concat(items.image))} alt={items.text} />
                         <p>{items.description}</p>
                         <a className="btn btn-projectlink margin-centered" href={items.url} target="_blank">Project Link</a>
                     </div>

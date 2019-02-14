@@ -102,6 +102,7 @@ export default class DrawPolygon extends Component {
                         <ul className="logo-list no-liststyle" ref="logoList3">
                             <li><span className="font-fa-brands fa-js"></span></li>
                             <li><span className="font-fa-brands fa-node"></span></li>
+                            <li><span className="font-fa-brands fa-vue"></span></li>
                             <li><span className="font-fa-brands fa-react"></span></li>
                             <li><span className="font-fa-brands fa-grunt"></span></li>
                             <li><span className="font-fa-brands fa-gulp"></span></li>

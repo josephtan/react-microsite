@@ -62,9 +62,9 @@ export default class Navigation extends Component{
             .curve(d3.curveCardinalClosed.tension(1));
         const hexagonData = [
             { "x": menuRad + menX, "y": menY},
-            { "x": menuRad / 2 + menX,  "y": menuRad * _sq32 + menY},
-            { "x": -menuRad / 2 + menX,  "y": menuRad * _sq32 + menY},
-            { "x": -menuRad + menX,  "y": menY},
+            { "x": menuRad / 2 + menX, "y": menuRad * _sq32 + menY},
+            { "x": -menuRad / 2 + menX, "y": menuRad * _sq32 + menY},
+            { "x": -menuRad + menX, "y": menY},
             { "x": -menuRad / 2 + menX,  "y": -menuRad * _sq32 + menY},
             { "x": menuRad / 2 + menX, "y": -menuRad * _sq32 + menY}];
         let strokeW = 2, fill = "transparent";

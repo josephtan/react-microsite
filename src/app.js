@@ -7,7 +7,9 @@ import Portfolio from "./js/views/portfolio";
 import Error from "./js/views/error";
 import Footer from "./js/components/footer";
 import {axiosInstance} from "./axiosOption";
+import {spanLettering} from "./js/components/utils/spanLettering";
 import './css/app.scss';
+import Anime from "react-anime";
 
 export default class App extends Component {
 
@@ -43,19 +45,24 @@ export default class App extends Component {
             }
             return Routes;
         });
-
+        let text ={};
+        text.scaleIn = [0,1];
+        text.duration =[800];
+        text.durationOut= [600];
         return(
             <div className="wrapper">
                 <div className="menu-overlay"></div>
                 <header className="container header block__relative">
-                    <div>
                         <div id="block__nav">
                             <Navigation />
                         </div>
                         <div className="column block__relative">
-                            <h1 className="header-title has-text-centered">Joseph Tan</h1>
+                            <h1 className="header-title has-text-centered">
+                                <Anime loop={true} scale={text.scaleIn} elasticity={600} duration={text.duration} direction="alternate" delay={(el, index) => {return 45 * (index+ 1)}}>
+                                {spanLettering("Joseph Tan")}
+                                </Anime>
+                            </h1>
                         </div>
-                    </div>
                 </header>
                 <main role="main" className="main-container container">
                     <Switch>

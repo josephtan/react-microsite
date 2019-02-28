@@ -31,7 +31,7 @@ export default class Navigation extends Component{
             }).catch((err)=>{
             console.log(err);
         });
-       this.renderHex(this.hexSelector,this.hexmarginTop,this.hexmarginLeft,this.hexRadius, this.hexWidth, this.hexHeight);
+       this.renderHexBtn(this.hexSelector,this.hexmarginTop,this.hexmarginLeft,this.hexRadius, this.hexWidth, this.hexHeight);
     }
     toggleShow (){
         const currentState = this.state.active;
@@ -53,7 +53,7 @@ export default class Navigation extends Component{
             document.querySelector(this.menuBtnText).classList.remove(this.activeClass);
         }
     }
-    renderHex(selector,marginTop,marginLeft,radius,hexWidth,hexHeight){
+    renderHexBtn(selector,marginTop,marginLeft,radius,hexWidth,hexHeight){
         let margins = {top: marginTop, left: marginLeft};
         let _sq32 = (Math.sqrt(3) / 2), menuRad = radius, menX = hexWidth, menY = hexHeight;
         const drawHexagon =  d3.line()

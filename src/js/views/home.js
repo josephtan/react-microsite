@@ -3,11 +3,12 @@ import AnimateText from "../components/animateText";
 import DrawPolygon from "../components/drawPolygon";
 
 
-const Home=()=> (
+const Home = props => {
+    return(
      <div className="page-home">
        <AnimateText/>
        <DrawPolygon />
-     </div>
-);
+     </div>);
+};
 
 export default Home;

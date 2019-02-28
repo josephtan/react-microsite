@@ -17,7 +17,27 @@ nav{
   .menu-text{position: relative; font-size: 1.2em; top: 40px; left: -50px;
    &.active{@extend .c-text-white;}
   }
+  .btn-hex{
+    @extend .block__relative;
+    @extend .block_inline;
+    width: $hex-home-wh;
+    height: $hex-home-wh;
+    overflow: hidden;
+    margin-right: $space-double;
+    -webkit-clip-path:url("#maskPath"); clip-path: url("#maskPath");
+    background: $cyan;
+    div{@extend .block__absolute; width: $hex-home-wh; height: $hex-home-wh; overflow: hidden; }
+    svg {
+      @extend .block__relative;
+      @extend .width-height-100;
+      margin: 0;
+      padding: 0;
 
+      path {
+        stroke: $cyan;
+      }
+    }
+  }
   .menu-btn{
   position: relative;
   z-index: 12;

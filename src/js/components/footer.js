@@ -17,7 +17,7 @@ export default class Footer extends Component {
                 </div>
                 <div className="container">
                     <div className="has-text-centered">
-                        <h4>Joseph Tan portfolio site build with Webpack 4.16, React 1.6, React Router 4.3, axios.js, d3.js &amp; react-anime.js</h4>
+                        <h4>Joseph Tan portfolio site build with Webpack 4.16, React 16.6.3, React Router 4.3, axios.js, d3.js &amp; react-anime.js</h4>
                     </div>
                 </div>
             </footer>

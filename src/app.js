@@ -27,6 +27,7 @@ export default class App extends Component {
             console.log(err);
         });
         this.detectCurrentPage();
+        this.headerContent();
     }
     detectCurrentPage(){
         let pathArray =  window.location.pathname.split('/');
@@ -48,7 +49,7 @@ export default class App extends Component {
 
         return (<div className={this.detectCurrentPage() + " column block__relative"}>
             <h1 className="header-title has-text-centered">
-                <Anime loop={true} translateY={text.scaleIn} elasticity={text.elasticity} duration={text.duration} direction="alternate" delay={(el, index) => {return 50 * (index+ 1)}}>
+                <Anime key={1+Date.now()} loop={true} translateY={text.scaleIn} elasticity={text.elasticity} duration={text.duration} direction="alternate" delay={(el, index) => {return 50 * (index+ 1)}}>
                     {spanLettering("Joseph Tan")}
                 </Anime>
             </h1>

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { NavLink } from "react-router-dom";
 import {axiosInstance} from "../../axiosOption";
 import * as d3 from "d3";
@@ -7,7 +7,7 @@ import NavClock from "./navClock";
 // =========
 // NAV ITEMS
 // =========
-export default class Navigation extends Component{
+export default class Navigation extends PureComponent{
     constructor(props){
         super(props);
         this.state = {show: this.props.show, showNav:this.props.showNav, navdata:[]};
@@ -79,7 +79,7 @@ export default class Navigation extends Component{
         const navLink = this.state.navdata.map((navlink) => {
             if (this.state.show) {
                 if(navlink.url !== "" && navlink.type !== ""){
-                    return (<NavLink onClick={this.clickHandle.bind(this)} className="has-text-centered is-white" key={navlink.url} exact={navlink.exact} to={navlink.url}> {navlink.text}</NavLink>);
+                    return (<NavLink onClick={this.clickHandle.bind(this)} className="has-text-centered is-white" key={navlink.url} exact={navlink.exact} to={navlink.url} > {navlink.text}</NavLink>);
                 }
 
             }

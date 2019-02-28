@@ -19,17 +19,17 @@ export default class animateText extends Component{
         return(
             <div className="block__relative has-text-centered">
                 <h3 className="fed">
-                    <Anime loop={true} scaleX={this.scaleX} opacity={this.aniOpacity} easing={"easeOutExpo"} duration={950} direction="alternate" delay={(el, index) => index * 80} >
+                    <Anime  key={2+Date.now()} loop={true} scaleX={this.scaleX} opacity={this.aniOpacity} easing={"easeOutExpo"} duration={950} direction="alternate" delay={(el, index) => index * 80} >
                         {spanLettering(this.title)}
                     </Anime>
                 </h3>
                 <h3 className="fsd">
-                    <Anime loop={true} scale={fsd.scaleIn} elasticity={600} duration={fsd.duration} direction="alternate" delay={(el, index) => {return 45 * (index+ 1)}}>
+                    <Anime  key={3+Date.now()} loop={true} scale={fsd.scaleIn} elasticity={600} duration={fsd.duration} direction="alternate" delay={(el, index) => {return 45 * (index+ 1)}}>
                         {spanLettering(this.title2)}
                     </Anime>
                  </h3>
                 <p className="description">
-                    <Anime loop={true} translateX={[40,0]} opacity={[0,1]} easing={"easeOutExpo"} duration={1400} delay={(el, index) => {return 500  + (30 * index)}}>
+                    <Anime  key={4+Date.now()} loop={true} translateX={[40,0]} opacity={[0,1]} easing={"easeOutExpo"} duration={1400} delay={(el, index) => {return 500  + (30 * index)}}>
                         {spanLettering(this.description)}
                     </Anime>
                 </p>

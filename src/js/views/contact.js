@@ -1,6 +1,4 @@
-
-import { browserHistory } from "react-router";
-
+import React from "react";
 
 const Contact =()=> (
     <div className="page-contact has-text-centered">

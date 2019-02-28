@@ -15,29 +15,29 @@ $fa-li-width:         (30em / 14) !default;
 \*------------------------------------*/
 @font-face {
   font-family: "FontAwesome";
-  src: url("../fonts/fa-regular-400.eot?") format("eot"),
-  url("../fonts/fa-regular-400.woff2") format("woff2"),
-  url("../fonts/fa-regular-400.woff") format("woff"),
-  url("../fonts/fa-regular-400.ttf") format("truetype"),
-  url("../fonts/fa-regular-400.svg#FontAwesome") format("svg");
+  src: url($fa-font-path + "/fa-regular-400.eot?") format("eot"),
+  url($fa-font-path + "/fa-regular-400.woff2") format("woff2"),
+  url($fa-font-path + "/fa-regular-400.woff") format("woff"),
+  url($fa-font-path + "/fa-regular-400.ttf") format("truetype"),
+  url($fa-font-path + "/fa-regular-400.svg#FontAwesome") format("svg");
 }
 
 @font-face {
   font-family: "FontAwesomeBrands";
-  src: url("../fonts/fa-brands-400.eot?") format("eot"),
-  url("../fonts/fa-brands-400.woff2") format("woff2"),
-  url("../fonts/fa-brands-400.woff") format("woff"),
-  url("../fonts/fa-brands-400.ttf") format("truetype"),
-  url("../fonts/fa-brands-400.svg#FontAwesome") format("svg");
+  src: url($fa-font-path + "/fa-brands-400.eot?") format("eot"),
+  url($fa-font-path + "/fa-brands-400.woff2") format("woff2"),
+  url($fa-font-path + "/fa-brands-400.woff") format("woff"),
+  url($fa-font-path + "/fa-brands-400.ttf") format("truetype"),
+  url($fa-font-path + "/fa-brands-400.svg#FontAwesome") format("svg");
 }
 
 @font-face {
   font-family: "FontAwesomeSolid";
-  src: url("../fonts/fa-solid-900.eot?") format("eot"),
-  url("../fonts/fa-solid-900.woff2") format("woff2"),
-  url("../fonts/fa-solid-900.woff") format("woff"),
-  url("../fonts/fa-solid-900.ttf") format("truetype"),
-  url("../fonts/fa-solid-900.svg#FontAwesome") format("svg");
+  src: url($fa-font-path + "/fa-solid-900.eot?") format("eot"),
+  url($fa-font-path + "/fa-solid-900.woff2") format("woff2"),
+  url($fa-font-path + "/fa-solid-900.woff") format("woff"),
+  url($fa-font-path + "/fa-solid-900.ttf") format("truetype"),
+  url($fa-font-path + "/fa-solid-900.svg#FontAwesome") format("svg");
 }
 
 /*------------------------------------*\
@@ -46,7 +46,7 @@ $fa-li-width:         (30em / 14) !default;
 .font-fa {font-family: "FontAwesome"; }
 .font-fa-brands {font-family: "FontAwesomeBrands";}
 .font-fa-solid {font-family: "FontAwesomeSolid";}
-.font-fa,.font-fa-brands,.font-fa-solid{font-size:2.6em;}
+.font-fa,.font-fa-brands,.font-fa-solid{font-size:2.5em;}
 .fa-github{&::before{content: $fa-var-github;}}
 .fa-git{&::before{content: $fa-var-git;}}
 .fa-html5{&::before{content: $fa-var-html5;}}
@@ -69,3 +69,4 @@ $fa-li-width:         (30em / 14) !default;
 .fa-php{&::before{content:$fa-var-php;}}
 .fa-fiddle{&::before{content:$fa-var-fiddle;}}
 .fa-linkedin{&::before{content:$fa-var-linkedin;}}
+.fa-vue{&::before{content:$fa-var-vue;}}

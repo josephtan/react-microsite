@@ -1,6 +1,6 @@
 import React from "react";
 
-const Profile=()=> (
+const Profile =()=> (
     <div className="page-profile has-text-centered">
         <h2>Profile</h2>
         <p className="med-width">
@@ -15,6 +15,7 @@ const Profile=()=> (
             <li>Build technical solutions that require little knowledge for non-technical personnel for updates and maintenance.</li>
             <li>Rewrite urls with htaccess on apache servers (for both security and SEO purposes).</li>
             <li>Setting up site accounts, email and hosting through Apache cpanel and rewrite URLS through DNS.</li>
+            <li>Generating up RSA keys on Linux machines, open an EC2 instance, assigning elastic IP's on AWS dashboard.</li>
             <li>More to come &hellip;</li>
         </ul>
     </div>

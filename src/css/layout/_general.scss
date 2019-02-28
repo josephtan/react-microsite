@@ -1,4 +1,4 @@
-html,body{height: 100%; margin:0; font-family: "Lato Light"}
+html,body{height: 100%; margin:0; font-family: "Lato";}
 #app{@include display-flex; @include flex-direction(column);}
 .wrapper{@include display-flex; @include flex-direction(column);
   @extend .width-height-100;

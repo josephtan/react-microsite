@@ -4,7 +4,7 @@ const Profile =()=> (
     <div className="page-profile has-text-centered">
         <h2>Profile</h2>
         <p className="med-width">
-            "I am a professional full-stack developer that primarily builds websites on PHP based open source CMS and moving towards node.js. My variety of work involvement has grown my skills over to web design,
+            "I am a professional full-stack developer that primarily builds websites on PHP based open source CMS and currently have hands on commercial experience in Webpack, yarn npm custom build. My participation outside the confines of my past roles has grown my skills over to web design,
             accessibility and basic server administration."
         </p>
         <h4> What have I done on my experience so far? </h4>

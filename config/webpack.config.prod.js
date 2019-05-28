@@ -539,8 +539,7 @@ module.exports = {
   devServer: {
     allowedHosts: [
       'jttan.com',
-      'www.jttan.com',
-      'jttan.com/projects/'
+      'www.jttan.com'
     ]
   }
 };

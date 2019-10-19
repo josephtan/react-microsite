@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import {axiosInstance} from "../../axiosOption";
 import * as d3 from "d3";
 import NavClock from "./navClock";
-
+import {RenderHex} from "./utils/renderHex";
 // =========
 // NAV ITEMS
 // =========
@@ -18,6 +18,8 @@ export default class Navigation extends PureComponent{
         this.hexSelector=".hex-btn";
         this.hexmarginTop=-22;
         this.hexmarginLeft=-22;
+        this.hexMTop=-22;
+        this.hexMLeft=-22;
         this.hexRadius= 24;
         this.hexWidth = 48;
         this.hexHeight = 48;
@@ -31,7 +33,7 @@ export default class Navigation extends PureComponent{
             }).catch((err)=>{
             console.log(err);
         });
-       this.renderHexBtn(this.hexSelector,this.hexmarginTop,this.hexmarginLeft,this.hexRadius, this.hexWidth, this.hexHeight);
+        RenderHex(this.hexSelector,this.hexMTop,this.hexMLeft,this.hexRadius, this.hexWidth, this.hexHeight,"hex-btn-path"," ");
     }
     toggleShow (){
         const currentState = this.state.active;

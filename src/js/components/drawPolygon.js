@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import {renderHex} from "./utils/renderHex";
+import {RenderHex} from "./utils/renderHex";
 import {classCycler} from "./utils/classCycler";
 
 export default class DrawPolygon extends Component {
@@ -13,13 +13,17 @@ export default class DrawPolygon extends Component {
      this.hexHeight = 66;
      this.hexRadius =  52;
      this.clipPathId = "maskPath";
-     this.maskSelector = ".masked-div";
+     this.maskSelector1 = ".masked-div-1";
+     this.maskSelector2 = ".masked-div-2";
+     this.maskSelector3 = ".masked-div-3";
      this.maskmarginTop = -12;
      this.maskmarginLeft = -14;
      this.maskhexWidth = 64;
      this.maskhexHeight = 64;
      this.maskhexRadius =  50;
-     this.maskclipPathId ="hexMask";
+     this.maskclipPathId1 ="hexMask1";
+     this.maskclipPathId2 ="hexMask2";
+     this.maskclipPathId3 ="hexMask3";
      this.cycleinterval = 2000;
      this.classTimer = 3000;
     }
@@ -27,8 +31,9 @@ export default class DrawPolygon extends Component {
         let classCyclerSelector = ReactDOM.findDOMNode(this.refs.logoList);
         let classCyclerSelector2 = ReactDOM.findDOMNode(this.refs.logoList2);
         let classCyclerSelector3 = ReactDOM.findDOMNode(this.refs.logoList3);
-        renderHex(this.polygonSelector, this.marginTop,this.marginLeft, this.hexRadius, this.hexWidth, this.hexHeight,this.clipPathId);
-        renderHex(this.maskSelector,this.maskmarginTop, this.maskmarginLeft, this.maskhexRadius, this.maskhexWidth, this.maskhexHeight,this.maskclipPathId);
+        RenderHex(this.maskSelector1,this.maskmarginTop, this.maskmarginLeft, this.maskhexRadius, this.maskhexWidth, this.maskhexHeight,"hex-path",this.maskclipPathId1," ");
+        RenderHex(this.maskSelector2,this.maskmarginTop, this.maskmarginLeft, this.maskhexRadius, this.maskhexWidth, this.maskhexHeight,"hex-path",this.maskclipPathId2," ");
+        RenderHex(this.maskSelector3,this.maskmarginTop, this.maskmarginLeft, this.maskhexRadius, this.maskhexWidth, this.maskhexHeight,"hex-path",this.maskclipPathId3," ");
         classCycler(classCyclerSelector, this.cycleinterval, this.classTimer);
         classCycler(classCyclerSelector2, this.cycleinterval, this.classTimer);
         classCycler(classCyclerSelector3, this.cycleinterval, this.classTimer);
@@ -39,7 +44,7 @@ export default class DrawPolygon extends Component {
             <div>
             <div className="block__relative home-skillsets">
                 <div className="draw-hex">
-                    <div className="masked-div">
+                    <div className="masked-div-1">
                         <ul className="logo-list no-liststyle" ref="logoList">
                             <li><span className="font-fa-brands fa-git"></span></li>
                             <li><span className="font-fa-brands fa-npm"></span></li>
@@ -50,7 +55,7 @@ export default class DrawPolygon extends Component {
                     </div>
                 </div>
                 <div className="draw-hex">
-                    <div className="masked-div">
+                    <div className="masked-div-2">
                         <ul className="logo-list no-liststyle" ref="logoList2">
                             <li><span className="font-fa-brands fa-html5"></span></li>
                             <li><span className="font-fa-brands fa-css3"></span></li>
@@ -59,7 +64,7 @@ export default class DrawPolygon extends Component {
                     </div>
                 </div>
                 <div className="draw-hex">
-                    <div className="masked-div">
+                    <div className="masked-div-3">
                         <ul className="logo-list no-liststyle" ref="logoList3">
                             <li><span className="font-fa-brands fa-js"></span></li>
                             <li><span className="font-fa-brands fa-node"></span></li>

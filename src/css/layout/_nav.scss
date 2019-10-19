@@ -14,7 +14,10 @@ nav{
     margin-left: -18px;
   }
 
-  .menu-text{position: relative; font-size: 1.2em; top: 40px; left: -50px;
+  .menu-text{position: relative; font-size: 1.2em;
+    top: 60px;
+    left: -30px;
+    color: $white;
    &.active{@extend .c-text-white;}
   }
   .btn-hex{
@@ -78,9 +81,9 @@ nav{
     .text{@extend .c-text-cyan;}
   }
 
-  .hamburger{
+  .hamburger-box{
     position: absolute;
-    z-index: 4;
+    z-index: 6;
   }
 
 }
@@ -93,7 +96,7 @@ nav{
       margin: 30% auto;
     }
     .dropdown-content{@include display-flex; @include flex-direction(column); @extend .block__absolute;
-      background: transparent; border-radius:0px; }
+      background: transparent; border-radius:0px; margin-top: 5em; }
     a{ margin-bottom: $space; padding: $space-half; border:$border-blue-1; @extend .c-text-white; min-width: 150px;
       background: $cyan;
       &:nth-child(odd){

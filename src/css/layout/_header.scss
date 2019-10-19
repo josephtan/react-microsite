@@ -1,7 +1,6 @@
 header {
 	.header-title{font-size: 4em; padding: 0;}
-	.menu-text{color: $white}
-	.nav-clock{position: relative; top:30px; left:-25px; padding:0.2em 0.2em 0.4em; border: 1px dashed $cyan; color: $white}
+	.nav-clock{position: relative;  top: 60px; left: -14px; padding:0.2em 0.2em 0.4em; border: 1px dashed $cyan; color: $white}
 	h1{span{@extend .block_inline}}
 	.header-active{display: block}
 }

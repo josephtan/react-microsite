@@ -58,7 +58,16 @@
   path{stroke: $cyan;}
 
   }
-  .masked-div{@extend .block__absolute; top:2px; left:2px; background: $gray-dark; -webkit-clip-path:url("#hexMask"); clip-path: url("#hexMask");
+  .masked-div-1{
+    -webkit-clip-path:url("#hexMask1"); clip-path: url("#hexMask1");
+  }
+  .masked-div-2{
+    -webkit-clip-path:url("#hexMask2"); clip-path: url("#hexMask2");
+  }
+  .masked-div-3{
+    -webkit-clip-path:url("#hexMask3"); clip-path: url("#hexMask3");
+  }
+  div[class^="masked-div-"]{@extend .block__absolute; top:2px; left:2px; background: $gray-dark;
     ul{@extend .block__relative; margin: 0; padding: 0;  width: $hex-home-wh; height: $hex-home-wh; overflow: hidden;
       li{ @extend .block__absolute;  width: $hex-home-wh; height: $hex-home-wh; top:-80%; padding:$space-half 0;
        // &.motion{ @include animation(cycle, 6s, ease-in-out, infinite)}
